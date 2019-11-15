@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.shiyanlou.com/courses/906/learning/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+    <title data-n-head="true">Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼</title><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta data-n-head="true" data-hid="keywords" name="keywords" content="实验楼,IT培训,IT教育,编程,在线编程,Linux,Linux教程,Linux操作系统,
+        Python,Python教程,Python基础教程,Java,Java编程,C语言,大数据,Node.js,
+        Hadoop,PHP,Docker,Git,R,SQL,MongoDB,Redis,Swift,Spark,在线实验,
+        IT在线教育,编程入门,项目训练,项目实践,webIDE,软件开发"><meta data-n-head="true" data-hid="description" name="description" content="实验楼是国内领先的IT在线编程及在线实训学习平台，专业导师提供精选的实践项目，
+        创新的技术使得学习者无需配置繁琐的本地环境，随时在线流畅使用。以就业为导向，
+        提供编程、运维、测试、云计算、大数据、数据库等全面的IT技术动手实践环境，
+        提供Linux、Python、Java、C语言、Node.js、Hadoop、PHP、Docker、Git、
+        R、SQL、MongoDB、Redis、Swift、Spark等千门热门课程。"><link data-n-head="true" rel="icon" type="image/x-icon" href="https://www.shiyanlou.com/favicon.ico"><link data-n-head="true" rel="stylesheet" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/font-awesome.min.css"><link rel="preload" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/f3a337105fb6129b39d1.js.下载" as="script"><link rel="preload" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/cc58aae2d5b624e45e75.js.下载" as="script"><link rel="preload" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/34e4120db4a53410cbcd.js.下载" as="script"><link rel="preload" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/e37290ea5e6d3a26020d.css" as="style"><link rel="preload" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/0eed17603f033879ebbc.js.下载" as="script"><link rel="preload" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/4f1eb9016cbba5f02532.css" as="style"><link rel="preload" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/13652036f3502b0c6db7.js.下载" as="script"><link rel="stylesheet" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/e37290ea5e6d3a26020d.css"><link rel="stylesheet" href="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/4f1eb9016cbba5f02532.css">
+  <script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/121.js.下载" id="AWSC_uabModule"></script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/um.js.下载" id="AWSC_umidPCModule"></script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/nvc.js.下载"></script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/nvcPrepare.jsonp"></script><script charset="utf-8" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/57e24fa8044cda0ae313.js.下载"></script><script charset="utf-8" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/6920e455a4bd0bff748c.js.下载"></script><script charset="utf-8" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/fa53ae7bdb5589798911.js.下载"></script><script charset="utf-8" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/78f12ae12e7792b2e80b.js.下载"></script><script async="" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/analytics.js.下载" charset="utf-8"></script></head>
+  <body class="" data-modal-open-count="0">
+    <div id="__nuxt"><div id="__layout"><div data-v-57a4eb3b=""><!---->  <div class="body" data-v-57a4eb3b=""><!----> <div class="lab-operation" data-v-d68b6290="" data-v-57a4eb3b=""><div data-v-00d8b544="" data-v-d68b6290="" class="section-box-root"><div data-v-4c89ebd0="" data-v-00d8b544="" class="wx-service-modal-root"><!----></div> <div data-v-48901454="" data-v-00d8b544="" class="left-box" style="width: 896px;"><div data-v-48901454="" class="top-bar"><div data-v-00d8b544="" data-v-48901454="" class="top-bar"><a data-v-00d8b544="" data-v-48901454="" href="https://www.shiyanlou.com/courses/906" class="home-btn"><img data-v-00d8b544="" data-v-48901454="" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/9f0571e.png"></a> <span data-v-00d8b544="" data-v-48901454="" class="course-name">
+        Pandas 数据处理基础入门
+      </span> <div data-v-00d8b544="" data-v-48901454="" class="sections-list-btn"><img data-v-00d8b544="" data-v-48901454="" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/01a1ffb.svg">
+        章节列表
+      </div></div></div> <div data-v-48901454="" class="box-container relative"><div data-v-48901454="" class="left-bar"><div data-v-00d8b544="" data-v-48901454="" class="left-bar"><div data-v-00d8b544="" data-v-48901454="" class="menu-tabs"><div data-v-00d8b544="" data-v-48901454="" class="item font-16 active">
+          步骤
+        </div><div data-v-00d8b544="" data-v-48901454="" class="item font-16">
+          报告
+        </div><div data-v-00d8b544="" data-v-48901454="" class="item font-16">
+          讨论
+        </div></div> <div data-v-00d8b544="" data-v-48901454="" class="menu-btns"><!----> <div data-v-00d8b544="" data-v-48901454="" title="" class="item" data-original-title="新手指南"><img data-v-00d8b544="" data-v-48901454="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0ZGRiIgc3Ryb2tlPSIjQzZDNkM2IiBzdHJva2Utd2lkdGg9IjEuMyIgZD0iTTEwIDE3LjgzOWw4LjA2NC0xLjQ5M2EuMzUuMzUgMCAwIDAgLjI4Ni0uMzQ0di0xMy4zYS4zNS4zNSAwIDAgMC0uNDE0LS4zNDRsLTcuOCAxLjQ0NGMtLjEzNi4wMTctLjEzNi4wMTctLjI3MyAwbC03LjgtMS40NDRhLjM1LjM1IDAgMCAwLS40MTMuMzQ0djEzLjNjMCAuMTY4LjEyLjMxMy4yODYuMzQ0TDEwIDE3LjgzOXoiLz4KICAgICAgICA8cGF0aCBmaWxsPSIjQzZDNkM2IiBkPSJNOS41IDEzLjVoMXYxaC0xdi0xem0xLjcxNy00LjY5NGMwLS43MDItLjQyOC0xLjE5Mi0xLjI3NS0xLjE5Mi0uNjEyIDAtMS4xNTkuMjkxLTEuNjc4Ljg2NUw3LjUgNy43NjRDOC4xNzEgNy4wMTcgOC45OTQgNi41IDEwLjA5NCA2LjVjMS40MzUgMCAyLjQwNi44MDggMi40MDYgMi4xOTggMCAxLjc3OC0yLjI5IDIuMDgxLTIuMDUgMy44MDJIOS4yN2MtLjMxMS0xLjkyOCAxLjk0Ny0yLjQxNyAxLjk0Ny0zLjY5NHoiLz4KICAgIDwvZz4KPC9zdmc+Cg=="></div> <div data-v-00d8b544="" data-v-48901454="" title="服务号" class="item"><img data-v-00d8b544="" data-v-48901454="" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/76a43f5.svg"></div> <div data-v-00d8b544="" data-v-48901454="" class="item" role="button"><img data-v-00d8b544="" data-v-48901454="" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/cc491c4.svg" title="" data-original-title="纠错"></div> <div data-v-00d8b544="" data-v-48901454="" class="item"><img data-v-00d8b544="" data-v-48901454="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjQzZDNkM2Ij4KICAgICAgICA8cGF0aCBmaWxsPSIjQzZDNkM2IiBzdHJva2Utd2lkdGg9Ii43IiBkPSJNMTMuOTIyIDQuMjN2Ni4xNDhhLjU1LjU1IDAgMCAxLS41NS41NUg4LjcwNHY1LjQ3OGEuNTUuNTUgMCAwIDEtLjU1LjU1SDMuNWEuMTUuMTUgMCAwIDAtLjE1LjE1di40MzRjMCAuMDgzLjA2Ny4xNS4xNS4xNWg1LjgwMnYtNS40NzhhLjU1LjU1IDAgMCAxIC41NS0uNTVoNC42NjdWNS41MTRhLjU1LjU1IDAgMCAxIC41NS0uNTVIMTkuNWEuMTUuMTUgMCAwIDAgLjE1LS4xNVY0LjM4YS4xNS4xNSAwIDAgMC0uMTUtLjE1aC01LjU3OHoiLz4KICAgICAgICA8cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuMiIgZD0iTTYuMzUgNS4xM0w0Ljc0OCA0LjA0NGMtLjE2Ni0uMTQ4LS4xNjYtLjE0OC0uMjQxLS4zMjZhLjYxMy42MTMgMCAwIDEgLjMzMy0uNzQ1bC4xMDktLjAzNiA0LjYzNS0xLjA5MmEuNzIuNzIgMCAwIDEgLjkyNi42MjRsLjU1MyA0LjYwMWMuMDAyLjE1Ny4wMDIuMTU3LS4wNS4zMTFhLjYxLjYxIDAgMCAxLS44ODguMjY4bC0xLjM5Mi0uODljLS41MDkuODgtMS41OTUgMi4yMjgtMi42MzIgMy4wNi0xLjM5IDEuMTE3LTIuODk4IDEuODc1LTQuNTIyIDIuMjdsLS4zOS0xLjEyOWMxLjc5OS0uODE2IDMuMDUzLTEuNzI0IDMuNzctMi43MDdBOC4xMDYgOC4xMDYgMCAwIDAgNi4zNSA1LjEyOXoiLz4KICAgIDwvZz4KPC9zdmc+Cg=="> <!----></div></div></div></div> <div data-v-48901454="" class="box-content relative full-width"><div data-v-659422e8="" data-v-00d8b544="" class="lab-document" data-v-48901454=""><!----> <div data-v-198dce4b="" data-v-659422e8="" class="single-document" width="896"><div data-v-198dce4b="" class="content"><!----> <div data-v-198dce4b=""><div data-v-198dce4b="" role="alert" aria-live="polite" aria-atomic="true" class="alert rules alert-info"><!----><p data-v-198dce4b="">说明：</p> <div data-v-198dce4b="">
+            1. 本章节实验步骤已融合在右侧环境，请开启环境后直接在右侧环境的 空白单元格 处输入代码做实验
+          </div> <div data-v-198dce4b="">
+            2. 若想仅查看实验步骤，请点击下方展开实验步骤
+          </div></div> <div data-v-198dce4b="" class="toggle-doc">
+          点击收起步骤
+          <i data-v-198dce4b="" class="fa fa-angle-up"></i></div> <div data-v-198dce4b="" class="markdown-body" style=""><h2 id="pandas-数据处理基础">Pandas 数据处理基础</h2>
+<hr>
+<h4 id="介绍">介绍</h4>
+<p>Pandas 是非常著名的开源数据处理库，我们可以通过它完成对数据集进行快速读取、转换、过滤、分析等一系列操作。除此之外，Pandas 拥有强大的缺失数据处理与数据透视功能，可谓是数据预处理中的必备利器。</p>
+<h4 id="知识点">知识点</h4>
+<ul>
+<li>数据类型</li>
+<li>数据读取</li>
+<li>数据选择</li>
+<li>数据删减</li>
+<li>数据填充</li>
+</ul>
+<hr>
+<img src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/pandas_logo.png">
+
+<p>Pandas 是非常著名的开源数据处理库，其基于 NumPy 开发，该工具是 Scipy 生态中为了解决数据分析任务而设计。Pandas 纳入了大量库和一些标准的数据模型，提供了高效地操作大型数据集所需的函数和方法。</p>
+<p>特有的数据结构是 Pandas 的优势和核心。简单来讲，我们可以将任意格式的数据转换为 Pandas 的数据类型，并使用 Pandas 提供的一系列方法进行转换、操作，最终得到我们期望的结果。</p>
+<p>所以，我们首先需要了解并熟悉 Pandas 支持的数据类型。</p>
+<h3 id="数据类型">数据类型</h3>
+<p>Pandas 的数据类型主要有以下几种，它们分别是：Series（一维数组），DataFrame（二维数组），Panel（三维数组），Panel4D（四维数组），PanelND（更多维数组）。其中 Series 和 DataFrame 应用的最为广泛，几乎占据了使用频率 90% 以上。</p>
+<h4 id="series">Series</h4>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html" target="_blank"><i class="fa fa-external-link-square"> Series</i></a> 是 Pandas 中最基本的一维数组形式。其可以储存整数、浮点数、字符串等类型的数据。Series 基本结构如下：</p>
+<pre><code class="hljs python">pandas.Series(<span class="hljs-keyword">data</span>=<span class="hljs-keyword">None</span>, <span class="hljs-built_in">index</span>=<span class="hljs-keyword">None</span>)
+</code></pre><p>其中，<code>data</code> 可以是字典，或者NumPy 里的 ndarray 对象等。<code>index</code> 是数据索引，索引是 Pandas 数据结构中的一大特性，它主要的功能是帮助我们更快速地定位数据。</p>
+<p>下面，我们基于 Python 字典新建一个示例 Series。</p>
+<p><i class="fa fa-arrow-circle-down"> 教学代码：</i></p>
+<pre><code class="hljs python">%matplotlib <span class="hljs-keyword">inline</span>
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+
+s = pd.Series({<span class="hljs-string">'a'</span>: <span class="hljs-number">10</span>, <span class="hljs-string">'b'</span>: <span class="hljs-number">20</span>, <span class="hljs-string">'c'</span>: <span class="hljs-number">30</span>})
+s
+</code></pre><p><i class="fa fa-arrow-circle-down"> 动手练习</i>｜如果你对课程所使用的实验楼 Notebook 在线环境并不熟悉，可以先学习 <a href="https://www.shiyanlou.com/courses/1322" target="_blank"><i class="fa fa-external-link-square"> 使用指南课程</i></a>。</p>
+<pre><code class="hljs python">
+</code></pre><p>如上所示，该 Series 的数据值是 10, 20, 30，索引为 a, b, c，数据值的类型默认识别为 <code>int64</code>。你可以通过 <code>type</code> 来确认 <code>s</code> 的类型。</p>
+<pre><code class="hljs python"><span class="hljs-keyword">type</span>(s)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>由于 Pandas 基于 NumPy 开发。那么 NumPy 的数据类型 <code>ndarray</code> 多维数组自然就可以转换为 Pandas 中的数据。而 Series 则可以基于 NumPy 中的一维数据转换。</p>
+<pre><code class="hljs python">import numpy <span class="hljs-keyword">as</span> np
+
+s = pd.<span class="hljs-constructor">Series(<span class="hljs-params">np</span>.<span class="hljs-params">random</span>.<span class="hljs-params">randn</span>(5)</span>)
+s
+</code></pre><pre><code class="hljs python">
+</code></pre><p>如上所示，我们给出了 NumPy 生成的一维随机数组，最终得到的 Series 索引默认从 0 开始，而数值类型为 <code>float64</code>。</p>
+<h4 id="dataframe">DataFrame</h4>
+<p>DataFrame 是 Pandas 中最为常见、最重要且使用频率最高的数据结构。DataFrame 和平常的电子表格或 SQL 表结构相似。你可以把 DataFrame 看成是 Series 的扩展类型，它仿佛是由多个 Series 拼合而成。它和 Series 的直观区别在于，数据不但具有行索引，且具有列索引。</p>
+<img src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/uid214893-20190531-1559284057250">
+<div style="color:#888; font-size:10px; text-align:right;"><a href="https://www.learndatasci.com/tutorials/python-pandas-tutorial-complete-introduction-for-beginners/"><i class="fa fa-copyright"> 来源</i></a></div>
+
+<p>DataFrame 基本结构如下：</p>
+<pre><code class="hljs python">pandas.DataFrame(<span class="hljs-attribute">data</span>=None, <span class="hljs-attribute">index</span>=None, <span class="hljs-attribute">columns</span>=None)
+</code></pre><p>区别于 Series，其增加了 <code>columns</code> 列索引。DataFrame 可以由以下多个类型的数据构建：</p>
+<ul>
+<li>一维数组、列表、字典或者 Series 字典。</li>
+<li>二维或者结构化的 <code>numpy.ndarray</code>。</li>
+<li>一个 Series 或者另一个 DataFrame。</li>
+</ul>
+<p>例如，我们首先使用一个由 Series 组成的字典来构建 DataFrame。</p>
+<pre><code class="hljs python">df = pd.DataFrame({<span class="hljs-string">'one'</span>: pd.Series([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]),
+                   <span class="hljs-string">'two'</span>: pd.Series([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>])})
+df
+</code></pre><pre><code class="hljs python">
+</code></pre><p>当不指定索引时，DataFrame 的索引同样是从 0 开始。我们也可以直接通过一个列表构成的字典来生成 DataFrame。</p>
+<pre><code class="hljs python">df = pd.DataFrame({<span class="hljs-string">'one'</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>],
+                   <span class="hljs-string">'two'</span>: [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]})
+df
+</code></pre><pre><code class="hljs python">
+</code></pre><p>或者反过来，由带字典的列表生成 DataFrame。</p>
+<pre><code class="hljs python"><span class="hljs-attribute">df</span> = pd.DataFrame([{<span class="hljs-string">'one'</span>: 1, <span class="hljs-string">'two'</span>: 4},
+                   {<span class="hljs-string">'one'</span>: 2, <span class="hljs-string">'two'</span>: 5},
+                   {<span class="hljs-string">'one'</span>: 3, <span class="hljs-string">'two'</span>: 6}])
+df
+</code></pre><pre><code class="hljs python">
+</code></pre><p>NumPy 的多维数组非常常用，同样可以基于二维数值来构建一个 DataFrame。</p>
+<pre><code class="hljs python">pd.<span class="hljs-constructor">DataFrame(<span class="hljs-params">np</span>.<span class="hljs-params">random</span>.<span class="hljs-params">randint</span>(5, <span class="hljs-params">size</span>=(2, 4)</span>))
+</code></pre><pre><code class="hljs python">
+</code></pre><p>至此，你应该已经清楚了 Pandas 常用的 Series 和 DataFrame 数据类型。Series 实际上可以被初略看出是只有 1 列数据的 DataFrame。当然，这个说法不严谨，二者的核心区别仍然是 Series 没有列索引。你可以观察如下所示由 NumPy 一维随机数组生成的 Series 和 DataFrame。</p>
+<pre><code class="hljs python">pd.<span class="hljs-constructor">Series(<span class="hljs-params">np</span>.<span class="hljs-params">random</span>.<span class="hljs-params">randint</span>(5, <span class="hljs-params">size</span>=(5,)</span>))
+</code></pre><pre><code class="hljs python">
+</code></pre><pre><code class="hljs python">pd.<span class="hljs-constructor">DataFrame(<span class="hljs-params">np</span>.<span class="hljs-params">random</span>.<span class="hljs-params">randint</span>(5, <span class="hljs-params">size</span>=(5,)</span>))
+</code></pre><pre><code class="hljs python">
+</code></pre><p>关于 Pandas 中的 Panel 等数据类型我们就不再介绍。首先是这些数据类型用的很少，其次就算你用到了，也可以通过从 DataFrame 等学到的技巧进行迁移应用，万变不离其宗。</p>
+<h3 id="数据读取">数据读取</h3>
+<p>我们想要使用 Pandas 来分析数据，那么首先需要读取数据。大多数情况下，数据都来源于外部的数据文件或者数据库。Pandas 提供了一系列的方法来读取外部数据，非常全面。下面，我们以最常用的 CSV 数据文件为例进行介绍。</p>
+<p>读取数据 CSV 文件的方法是 <code>pandas.read_csv()</code>，你可以直接传入一个相对路径，或者是网络 URL。</p>
+<pre><code class="hljs python">df = pd.read_csv(<span class="hljs-string">"https://labfile.oss.aliyuncs.com/courses/906/los_census.csv"</span>)
+df
+</code></pre><pre><code class="hljs python">
+</code></pre><p>由于 CSV 存储时是一个二维的表格，那么 Pandas 会自动将其读取为 DataFrame 类型。</p>
+<p>现在你应该就明白了，DataFrame 是 Pandas 构成的核心。一切的数据，无论是外部读取还是自行生成，我们都需要先将其转换为 Pandas 的 DataFrame 或者 Series 数据类型。实际上，大多数情况下，这一切都是设计好的，无需执行额外的转换工作。</p>
+<p><code>pd.read_</code> 前缀开始的方法还可以读取各式各样的数据文件，且支持连接数据库。这里，我们不再依次赘述，你可以阅读 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/io.html" target="_blank"><i class="fa fa-external-link-square"> 官方文档相应章节</i></a> 熟悉这些方法以及搞清楚这些方法包含的参数。</p>
+<p>你可能又一个疑问：为什么要将数据转换为 Series 或者 DataFrame 结构？</p>
+<p>实际上，我现在就可以先回答这个问题。因为 Pandas 针对数据操作的全部方法都是基于 Pandas 支持的数据结构设计的。也就是说，只有 Series 或者 DataFrame 才能使用 Pandas 提供的方法和函数进行处理。所以，学习真正数据处理方法之前，我们需要将数据转换生成为 Series 或 DataFrame 类型。</p>
+<h3 id="基本操作">基本操作</h3>
+<p>通过上面的内容，我们已经知道一个 DataFrame 结构大致由 3 部分组成，它们分别是列名称、索引和数据。</p>
+<img src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/uid214893-20190531-1559286555222">
+<div style="color:#888; font-size:10px; text-align:right;"><a href="https://medium.com/epfl-extension-school/selecting-data-from-a-pandas-dataframe-53917dc39953"><i class="fa fa-copyright"> 来源</i></a></div>
+
+<p>接下来，我们就学习针对 DataFrame 的基本操作。本次课程中，我们不会刻意强调 Series，因为你在 DataFrame 上学习的大多数方法和技巧都适用于对 Series 进行处理，二者同根同源。</p>
+<p>上面，我们已经读取了一个外部数据，这是洛杉矶的人口普查数据。有些时候，我们读取的文件很大。如果全部输出预览这些文件，既不美观，又很耗时。还好，Pandas 提供了 <code>head()</code> 和 <code>tail()</code> 方法，它可以帮助我们只预览一小块数据。</p>
+<pre><code class="hljs python">df.head<span class="hljs-comment">()</span>  <span class="hljs-attr"># 默认显示前 5</span> 条
+</code></pre><pre><code class="hljs python">
+</code></pre><pre><code class="hljs python">df.tail(<span class="hljs-number">7</span>)  # 指定显示后 <span class="hljs-number">7</span> 条
+</code></pre><pre><code class="hljs python">
+</code></pre><p>Pandas 还提供了统计和描述性方法，方便你从宏观的角度去了解数据集。<code>describe()</code> 相当于对数据集进行概览，会输出该数据集每一列数据的计数、最大值、最小值等。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.describe</span>()
+</code></pre><pre><code class="hljs python">
+</code></pre><p>Pandas 基于 NumPy 开发，所以任何时候你都可以通过 <code>.values</code> 将 DataFrame 转换为 NumPy 数组。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.values</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>这也就说明了，你可以同时使用 Pandas 和 NumPy 提供的 API 对同一数据进行操作，并在二者之间进行随意转换。这就是一个非常灵活的工具生态圈。</p>
+<p>除了 <code>.values</code>，DataFrame 支持的常见属性可以通过 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#attributes-and-underlying-data" target="_blank"><i class="fa fa-external-link-square"> 官方文档相应章节</i></a> 查看。其中常用的有：</p>
+<pre><code class="hljs python">df.<span class="hljs-keyword">index</span>  <span class="hljs-meta"># 查看索引</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><pre><code class="hljs python">df.columns  <span class="hljs-meta"># 查看列名</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><pre><code class="hljs python">df.<span class="hljs-keyword">shape </span> <span class="hljs-comment"># 查看形状</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><h3 id="数据选择">数据选择</h3>
+<p>在数据预处理过程中，我们往往会对数据集进行切分，只将需要的某些行、列，或者数据块保留下来，输出到下一个流程中去。这也就是所谓的数据选择，或者数据索引。</p>
+<p>由于 Pandas 的数据结构中存在索引、标签，所以我们可以通过多轴索引完成对数据的选择。</p>
+<h4 id="基于索引数字选择">基于索引数字选择</h4>
+<p>当我们新建一个 DataFrame 之后，如果未自己指定行索引或者列对应的标签，那么 Pandas 会默认从 0 开始以数字的形式作为行索引，并以数据集的第一行作为列对应的标签。其实，这里的「列」也有数字索引，默认也是从 0 开始，只是未显示出来。</p>
+<p>所以，我们首先可以基于数字索引对数据集进行选择。这里用到的 Pandas 中的 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html#pandas.DataFrame.iloc" target="_blank"><code>.iloc</code></a> 方法。该方法可以接受的类型有：</p>
+<ol>
+<li>整数。例如：<code>5</code></li>
+<li>整数构成的列表或数组。例如：<code>[1, 2, 3]</code></li>
+<li>布尔数组。</li>
+<li>可返回索引值的函数或参数。</li>
+</ol>
+<p>下面，我们使用上方的示例数据进行演示。</p>
+<p>首先，我们可以选择前 3 行数据。这和 Python 或者 NumPy 里面的切片很相似。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.iloc</span><span class="hljs-selector-attr">[:3]</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>我们还可以选择特定的一行。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.iloc</span><span class="hljs-selector-attr">[5]</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>那么选择多行，是不是 <code>df.iloc[1, 3, 5]</code> 这样呢？</p>
+<p>答案是错误的。<code>df.iloc[]</code> 的 <code>[[行]，[列]]</code> 里面可以同时接受行和列的位置，如果你直接键入 <code>df.iloc[1, 3, 5]</code> 就会报错。</p>
+<p>所以，很简单。如果你想要选择 1，3，5 行，可以这样做。</p>
+<pre><code class="hljs python">df.iloc<span class="hljs-string">[[1, 3, 5]]</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>选择行学会以后，选择列就应该能想到怎么办了。例如，我们要选择第 2-4 列。</p>
+<pre><code class="hljs python">df.iloc[:, <span class="hljs-number">1</span>:<span class="hljs-number">4</span>]
+</code></pre><pre><code class="hljs python">
+</code></pre><p>这里选择 2-4 列，输入的却是 <code>1:4</code>。这和 Python 或者 NumPy 里面的切片操作非常相似。既然我们能定位行和列，那么只需要组合起来，我们就可以选择数据集中的任何数据了。</p>
+<h4 id="基于标签名称选择">基于标签名称选择</h4>
+<p>除了根据数字索引选择，还可以直接根据标签对应的名称选择。这里用到的方法和上面的 <code>iloc</code> 很相似，少了个 <code>i</code> 为 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html#pandas.DataFrame.loc" target="_blank"><code>df.loc[]</code></a>。</p>
+<p><code>df.loc[]</code> 可以接受的类型有：</p>
+<ol>
+<li>单个标签。例如：<code>2</code> 或 <code>'a'</code>，这里的 <code>2</code> 指的是标签而不是索引位置。</li>
+<li>列表或数组包含的标签。例如：<code>['A', 'B', 'C']</code>。</li>
+<li>切片对象。例如：<code>'A':'E'</code>，注意这里和上面切片的不同支持，首尾都包含在内。</li>
+<li>布尔数组。</li>
+<li>可返回标签的函数或参数。</li>
+</ol>
+<p>下面，我们来演示 <code>df.loc[]</code> 的用法。先选择前 3 行：</p>
+<pre><code class="hljs python">df.loc[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>]
+</code></pre><pre><code class="hljs python">
+</code></pre><p>再选择 1，3，5 行：</p>
+<pre><code class="hljs python">df.loc<span class="hljs-string">[[0, 2, 4]]</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>然后，选择 2-4 列：</p>
+<pre><code class="hljs python">df<span class="hljs-selector-class">.loc</span>[:, <span class="hljs-string">'Total Population'</span>:<span class="hljs-string">'Total Males'</span>]
+</code></pre><pre><code class="hljs python">
+</code></pre><p>最后，选择 1，3 行和 Median Age 后面的列：</p>
+<pre><code class="hljs python">df.loc[[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>], <span class="hljs-string">'Median Age'</span>:]
+</code></pre><pre><code class="hljs python">
+</code></pre><h3 id="数据删减">数据删减</h3>
+<p>虽然我们可以通过数据选择方法从一个完整的数据集中拿到我们需要的数据，但有的时候直接删除不需要的数据更加简单直接。Pandas 中，以 <code>.drop</code> 开头的方法都与数据删减有关。</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html#pandas.DataFrame.drop" target="_blank"><code>DataFrame.drop</code></a> 可以直接去掉数据集中指定的列和行。一般在使用时，我们指定 <code>labels</code> 标签参数，然后再通过 <code>axis</code> 指定按列或按行删除即可。当然，你也可以通过索引参数删除数据，具体查看官方文档。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.drop</span>(labels=[<span class="hljs-string">'Median Age'</span>, <span class="hljs-string">'Total Males'</span>], axis=<span class="hljs-number">1</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop_duplicates.html#pandas.DataFrame.drop_duplicates" target="_blank"><code>DataFrame.drop_duplicates</code></a> 则通常用于数据去重，即剔除数据集中的重复值。使用方法非常简单，指定去除重复值规则，以及 <code>axis</code> 按列还是按行去除即可。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.drop_duplicates</span>()
+</code></pre><pre><code class="hljs python">
+</code></pre><p>除此之外，另一个用于数据删减的方法 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html#pandas.DataFrame.dropna" target="_blank"><code>DataFrame.dropna</code></a> 也十分常用，其主要的用途是删除缺少值，即数据集中空缺的数据列或行。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.dropna</span>()
+</code></pre><pre><code class="hljs python">
+</code></pre><p>对于提到的这 3 个常用的数据删减方法，大家一定要通过给出的链接去阅读官方文档。这些常用方法没有太多需要注意的地方，通过文档了解其用法即可，所以我们也不会化简为繁地进行介绍。</p>
+<h3 id="数据填充">数据填充</h3>
+<p>既然提到了数据删减，反之则可能会遇到数据填充的情况。而对于一个给定的数据集而言，我们一般不会乱填数据，而更多的是对缺失值进行填充。</p>
+<p>在真实的生产环境中，我们需要处理的数据文件往往没有想象中的那么美好。其中，很大几率会遇到的情况就是缺失值。缺失值主要是指数据丢失的现象，也就是数据集中的某一块数据不存在。除此之外、存在但明显不正确的数据也被归为缺失值一类。例如，在一个时间序列数据集中，某一段数据突然发生了时间流错乱，那么这一小块数据就是毫无意义的，可以被归为缺失值。</p>
+<h4 id="检测缺失值">检测缺失值</h4>
+<p>Pandas 为了更方便地检测缺失值，将不同类型数据的缺失均采用 <code>NaN</code> 标记。这里的 NaN 代表 Not a Number，它仅仅是作为一个标记。例外是，在时间序列里，时间戳的丢失采用 <code>NaT</code> 标记。</p>
+<p>Pandas 中用于检测缺失值主要用到两个方法，分别是：<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isna.html#pandas.DataFrame.isna" target="_blank"><code>isna()</code></a> 和 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.notna.html#pandas.DataFrame.notna" target="_blank"><code>notna()</code></a>，故名思意就是「是缺失值」和「不是缺失值」。默认会返回布尔值用于判断。</p>
+<p>接下来，我们人为生成一组包含确实值的示例数据。</p>
+<pre><code class="hljs python">df = pd.DataFrame(np.random.rand(<span class="hljs-number">9</span>, <span class="hljs-number">5</span>), columns=<span class="hljs-type">list</span>('ABCDE'))
+# 插入 T 列，并打上时间戳
+df.insert(value=pd.Timestamp('<span class="hljs-number">2017</span><span class="hljs-number">-10</span><span class="hljs-number">-1</span>'), loc=<span class="hljs-number">0</span>, column='Time')
+# 将 <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span> 列的 <span class="hljs-number">1</span>，<span class="hljs-number">3</span>，<span class="hljs-number">5</span> 行置为缺失值
+df.iloc[[<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>]] = np.nan
+# 将 <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span> 列的 <span class="hljs-number">2</span>，<span class="hljs-number">4</span>，<span class="hljs-number">6</span> 行置为缺失值
+df.iloc[[<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]] = np.nan
+df
+</code></pre><pre><code class="hljs python">
+</code></pre><p>然后，通过 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isna.html#pandas.DataFrame.isna" target="_blank"><code>isna()</code></a> 或 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.notna.html#pandas.DataFrame.notna" target="_blank"><code>notna()</code></a> 中的一个即可确定数据集中的缺失值。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.isna</span>()
+</code></pre><pre><code class="hljs python">
+</code></pre><p>上面已经对缺省值的产生、检测进行了介绍。实际上，面对缺失值一般就是填充和剔除两项操作。填充和清除都是两个极端。如果你感觉有必要保留缺失值所在的列或行，那么就需要对缺失值进行填充。如果没有必要保留，就可以选择清除缺失值。</p>
+<p>其中，缺失值剔除的方法 <code>dropna()</code> 已经在上面介绍过了。下面来看一看填充缺失值 <code>fillna()</code> 方法。</p>
+<p>首先，我们可以用相同的标量值替换 <code>NaN</code>，比如用 <code>0</code>。</p>
+<pre><code class="hljs python">df.fillna(<span class="hljs-number">0</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>除了直接填充值，我们还可以通过参数，将缺失值前面或者后面的值填充给相应的缺失值。例如使用缺失值前面的值进行填充：</p>
+<pre><code class="hljs python">df.fillna(<span class="hljs-function"><span class="hljs-keyword">method</span>='<span class="hljs-title">pad</span>')</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>或者是后面的值：</p>
+<pre><code class="hljs python">df.fillna(<span class="hljs-function"><span class="hljs-keyword">method</span>='<span class="hljs-title">bfill</span>')</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>最后一行由于没有对于的后序值，自然继续存在缺失值。</p>
+<p>上面的例子中，我们的缺失值是间隔存在的。那么，如果存在连续的缺失值是怎样的情况呢？试一试。首先，我们将数据集的第 2，4 ，6 列的第 3，5 行也置为缺失值。</p>
+<pre><code class="hljs python">df.iloc[[<span class="hljs-number">3</span>, <span class="hljs-number">5</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]] = np.nan
+</code></pre><pre><code class="hljs python">
+</code></pre><p>然后来正向填充：</p>
+<pre><code class="hljs python">df.fillna(<span class="hljs-function"><span class="hljs-keyword">method</span>='<span class="hljs-title">pad</span>')</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>可以看到，连续缺失值也是按照前序数值进行填充的，并且完全填充。这里，我们可以通过 <code>limit=</code> 参数设置连续填充的限制数量。</p>
+<pre><code class="hljs python">df.fillna(<span class="hljs-function"><span class="hljs-keyword">method</span>='<span class="hljs-title">pad</span>', <span class="hljs-title">limit</span>=1)  # 最多填充一项</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>除了上面的填充方式，还可以通过 Pandas 自带的求平均值方法等来填充特定列或行。举个例子：</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.fillna</span>(<span class="hljs-selector-tag">df</span><span class="hljs-selector-class">.mean</span>()<span class="hljs-selector-attr">['C':'E']</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>对 C 列和 E 列用平均值填充。</p>
+<h4 id="插值填充">插值填充</h4>
+<p>插值是数值分析中一种方法。简而言之，就是借助于一个函数（线性或非线性），再根据已知数据去求解未知数据的值。插值在数据领域非常常见，它的好处在于，可以尽量去还原数据本身的样子。</p>
+<p>我们可以通过 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.interpolate.html#pandas.DataFrame.interpolate" target="_blank"><code>interpolate()</code></a> 方法完成线性插值。当然，其他一些插值算法可以阅读官方文档了解。</p>
+<pre><code class="hljs python"># 生成一个 DataFrame
+df = pd.DataFrame({<span class="hljs-string">'A'</span>: [<span class="hljs-number">1.1</span>, <span class="hljs-number">2.2</span>, np.nan, <span class="hljs-number">4.5</span>, <span class="hljs-number">5.7</span>, <span class="hljs-number">6.9</span>],
+                   <span class="hljs-string">'B'</span>: [<span class="hljs-number">.21</span>, np.nan, np.nan, <span class="hljs-number">3.1</span>, <span class="hljs-number">11.7</span>, <span class="hljs-number">13.2</span>]})
+df
+</code></pre><pre><code class="hljs python">
+</code></pre><p>对于上面存在的缺失值，如果通过前后值，或者平均值来填充是不太能反映出趋势的。这时候，插值最好使。我们用默认的线性插值试一试。</p>
+<pre><code class="hljs python">df_interpolate = df.interpolate()
+df_interpolate
+</code></pre><pre><code class="hljs python">
+</code></pre><p>下图展示了插值后的数据，明显看出插值结果符合数据的变化趋势。如果按照前后数据顺序填充，则无法做到这一点。</p>
+<p><img src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/document-uid214893labid3378timestamp1501655359105.png" alt="image"></p>
+<p>对于 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.interpolate.html#pandas.DataFrame.interpolate" target="_blank"><code>interpolate()</code></a> 支持的插值算法，也就是 <code>method=</code>。下面给出几条选择的建议：</p>
+<ol>
+<li>如果你的数据增长速率越来越快，可以选择 <code>method='quadratic'</code>二次插值。</li>
+<li>如果数据集呈现出累计分布的样子，推荐选择 <code>method='pchip'</code>。</li>
+<li>如果需要填补缺省值，以平滑绘图为目标，推荐选择 <code>method='akima'</code>。</li>
+</ol>
+<p>当然，最后提到的 <code>method='akima'</code>，需要你的环境中安装了 Scipy 库。除此之外，<code>method='barycentric'</code> 和 <code>method='pchip'</code> 同样也需要 Scipy 才能使用。</p>
+<h3 id="数据可视化">数据可视化</h3>
+<p>NumPy，Pandas，Matplotlib 构成了一个完善的数据分析生态圈，所以 3 个工具的兼容性也非常好，甚至共享了大量的接口。当我们的数据是以 DataFrame 格式呈现时，可以直接使用 Pandas 提供的 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#plotting" target="_blank"><code>DataFrame.plot</code></a> 方法调用 Matplotlib 接口绘制常见的图形。</p>
+<p>例如，我们使用上面插值后的数据 <code>df_interpolate</code> 绘制线形图。</p>
+<pre><code class="hljs python"><span class="hljs-selector-tag">df_interpolate</span><span class="hljs-selector-class">.plot</span>()
+</code></pre><pre><code class="hljs python">
+</code></pre><p>其他样式的图形也很简单，指定 <code>kind=</code> 参数即可。</p>
+<pre><code class="hljs python">df_interpolate.plot(<span class="hljs-attribute">kind</span>=<span class="hljs-string">'bar'</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>更多的图形样式和参数，阅读官方文档中的详细说明。Pandas 绘图虽然不可能做到 Matplotlib 的灵活性，但是其简单易用，适合于数据的快速呈现和预览。</p>
+<h3 id="其他用法">其他用法</h3>
+<p>由于 Pandas 包含的内容实在太多，除了阅读完整的官方文档，很难做到通过一个实验或者一个课程进行全面了解。当然，本课程的目的是带大家熟悉 Pandas 的常用基础方法，至少你大致清楚了 Pandas 是什么，能干什么。</p>
+<p>除了上面提到的一些方法和技巧，实际上 Pandas 常用的还有：</p>
+<ul>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#binary-operator-functions" target="_blank"><i class="fa fa-external-link-square"> 数据计算</i></a>，例如：<code>DataFrame.add</code> 等。</li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#function-application-groupby-window" target="_blank"><i class="fa fa-external-link-square"> 数据聚合</i></a>，例如：<code>DataFrame.groupby</code> 等。</li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#computations-descriptive-stats" target="_blank"><i class="fa fa-external-link-square"> 统计分析</i></a>，例如：<code>DataFrame.abs</code> 等。</li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#time-series-related" target="_blank"><i class="fa fa-external-link-square"> 时间序列</i></a>，例如：<code>DataFrame.shift</code> 等。</li>
+</ul>
+<h3 id="实验总结">实验总结</h3>
+<p>本次实验，我们着重介绍了 Pandas 的数据结构，你需要对 Series 和 DataFrame 有深入的认识，才能对后面采用 Pandas 进行数据预处理有更深刻的理解。除此之外，我们了解了 Pandas 数据读取、数据选择、数据删减、数据填充的方法和技巧，希望大家后续结合官方文档进一步深入理解。</p>
+<p><i class="fa fa-sign-in"> 继续学习</i> </p>
+<ul>
+<li><a href="https://www.shiyanlou.com/courses/335" target="_blank"><i class="fa fa-external-link-square"> Pandas 时间序列数据处理</i></a></li>
+<li><a href="https://www.shiyanlou.com/courses/1091" target="_blank"><i class="fa fa-external-link-square"> Pandas 百题大冲关</i></a></li>
+</ul>
+<div style="color:#999; font-size:12px;">©️ 本课程内容，由作者授权实验楼发布，未经允许，禁止转载、下载及非法传播。</div><h2></h2></div></div> <div data-v-198dce4b="" class="copyright">
+        *本课程内容由作者授权实验楼发布，未经允许，禁止转载、下载及非法传播
+      </div></div> <div data-v-5a6f02b8="" data-v-198dce4b="" class="toolbar"><!----> <div data-v-5a6f02b8="" class="toolbar-btns"><button data-v-5a6f02b8="" type="button" class="btn toolbar-btn btn-primary">
+        完成学习
+      </button></div></div> <div data-v-31af5ef6="" data-v-198dce4b=""><!----></div></div> <!----> <!----> <!----></div> <div data-v-ea7cbec0="" data-v-00d8b544="" class="lab-console-report" data-v-48901454="" style="display: none;"><!----> <ul data-v-ea7cbec0="" class="nav nav-tabs"><li data-v-ea7cbec0="" class="nav-item"><a data-v-ea7cbec0="" class="nav-link active">
+        编辑
+      </a></li><li data-v-ea7cbec0="" class="nav-item"><a data-v-ea7cbec0="" class="nav-link">
+        预览
+      </a></li></ul> <div data-v-ea7cbec0="" class="tab-content"><div data-v-ea7cbec0="" class="tab-pane active lab-report-tab"><div data-v-ea88a3ba="" data-v-ea7cbec0="" class="editor"><div data-v-94795872="" data-v-ea88a3ba="" class="markdown-editor"><div data-v-374f1a78="" data-v-94795872="" class="tools"><div data-v-374f1a78=""><i data-v-374f1a78="" class="fa fa-bold"></i> <i data-v-374f1a78="" class="fa fa-italic"></i> <i data-v-374f1a78="" class="fa fa-link"></i> <i data-v-374f1a78="" class="fa fa-quote-left"></i> <i data-v-374f1a78="" class="fa fa-code"></i> <i data-v-374f1a78="" class="fa fa-image add-image-btn"></i> <div data-v-374f1a78="" class="custom-file b-form-file upload-image" id="__BVID__48__BV_file_outer_"><input type="file" class="custom-file-input" id="__BVID__48"><label data-browse="Browse" class="custom-file-label" for="__BVID__48">No file chosen</label></div> <i data-v-374f1a78="" class="fa fa-list-ol"></i> <i data-v-374f1a78="" class="fa fa-list-ul"></i></div> <a data-v-374f1a78="" href="https://www.shiyanlou.com/questions/764/" target="_blank" class="markdown-syntax"><i data-v-374f1a78="" class="fa fa-question-circle"></i>
+    格式说明
+  </a></div> <textarea data-v-94795872="" placeholder="报告将自动保存，推荐使用 markdown 语法：
+
+报告是您在本实验保存的笔记、截图及实验代码的完整记录，多记录学习更高效哦~" class="textarea form-control"></textarea> <!----></div> <div data-v-78b3a632="" data-v-ea88a3ba=""><!----> <div data-v-78b3a632="" class="custom-file b-form-file upload-image" id="__BVID__50__BV_file_outer_"><input type="file" class="custom-file-input" id="__BVID__50"><label data-browse="Browse" class="custom-file-label" for="__BVID__50">No file chosen</label></div></div></div></div> <!----></div> <button data-v-ea7cbec0="" type="button" disabled="disabled" class="btn publish-btn btn-primary disabled"><i data-v-ea7cbec0="" class="fa fa-share"></i> <span data-v-ea7cbec0="">发布</span></button></div> <div data-v-24a59a0a="" data-v-00d8b544="" class="lab-question" data-v-48901454="" style="display: none;"><div data-v-38f43bd3="" data-v-24a59a0a="" class="operate"><button data-v-38f43bd3="" class="btn btn-primary">
+    发布帖子
+  </button> <fieldset data-v-38f43bd3="" class="form-group form-group" id="__BVID__53"><!----><div tabindex="-1" role="group"><div data-v-38f43bd3="" class="custom-control custom-checkbox"><input type="checkbox" name="checkbox" autocomplete="off" class="custom-control-input" value="true" id="__BVID__54"><label class="custom-control-label" for="__BVID__54">
+      只看我的
+    </label></div><!----><!----><!----></div></fieldset> <!----> <div data-v-38f43bd3=""><!----></div></div> <div data-v-51d37e30="" data-v-24a59a0a="" class="best-question"><!----></div> <div data-v-91301d3e="" data-v-24a59a0a="" class="normal-question"><div data-v-5fd8fa79="" data-v-91301d3e="" class="question-list" question-type="normal"><div data-v-5fd8fa79="" class="list-title">
+    本节帖子(1)
+  </div> <ul data-v-5fd8fa79="" style="height: 1092px;"><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/84630" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          关于numpy乘法的疑问
+        </p> <span data-v-5fd8fa79="" class="answer-num">3回复</span></a></li> <li data-v-5fd8fa79="" class="load-msg"><span data-v-5fd8fa79="">到底了~</span></li></ul></div></div></div> <!----> <!----></div> <div data-v-23e30aba="" data-v-00d8b544="" class="course-labs-panel customize-modal text-right" data-v-48901454="" style="display: none;"><div data-v-23e30aba="" class="modal-content-wrapper modal-labs-box inline-block text-left"><div data-v-23e30aba="" class="modal-content content-box"><div data-v-23e30aba="" class="box-header progress-info no-margin"><p data-v-23e30aba="" class="progress-desc font-18">
+          目前已完成 1/1 个章节的学习
+        </p> <div data-v-23e30aba="" class="progress-graph flex space-between vertical-center"><div data-v-23e30aba="" class="progress-bar-outter relative"><!----> <div data-v-23e30aba="" class="progress" style="height: 5px;"><div data-v-23e30aba="" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" class="progress-bar bg-primary learn-progress-bar" style="width: 100%;"><!----></div></div></div> <!----> <div data-v-23e30aba="" aria-hidden="true" class="d-none" style="display: none;"><div><span data-v-23e30aba="" class="font-12">
+                您已学完本课程，证书稍后将发放到您的账户
+              </span></div></div></div> <!----></div> <div data-v-23e30aba="" class="box-body chapter-stages"><div data-v-58426d58="" data-v-23e30aba="" class="chapter-stage collapse-item"><!----> <div data-v-58426d58="" id="collapse-stage-0" class="stage-body collapse show" style=""><div data-v-5c68598e="" data-v-58426d58="" class="lab-item pointer"><div data-v-5c68598e="" class="item-top flex space-between color-primary bold"><div data-v-5c68598e="" class="top-left vertical-center"><span data-v-5c68598e="" class="inline-block lab-icon"><!----> <!----> <img data-v-5c68598e="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAmtJREFUSA3tlU9oE0EUxt+bdMM2kRIEq1IPWqweQgtSL2JrsiCIelJR9CIIShRDTloQFHsQ/ANCbYK2VNFj6cGjF9HdFMEIFaShPVQpCl6sCKE13SRr5jmzcUKp3dbECoIOLN/um3nfb+ftzCzA//a3VQDVCwXN/r0c4SYBdQBBg4rXrAjfEHCcMdaT3xN/JvNdSFN6oK1EpXEk+CQiI0g0X7P5jwQC1AnhiHjc5Ed/x2zk7Fv3jR1eOghAumB22dHEx3oBKi9kPrxRwNnPFV/oY7IDgUJSbeP3AdInZ5zKiZLNKV8XIjv+ZKsZ0kvEoqZZ08JYERIw75xe8yIVVjO9lU5dy2D2rnxutJI9gdHBjarPS5eF6OnkVQ7QRw5q0iA8MeIn4GeQ2POKIXVxXrRWAnlCdCt5BTi/CMx3IG+cfyNNp2dmDkttbW5+LLWlBY4KmZagYGZovYwt1TwhAPwEIL4KB7WXKpGQxwDZo4nwsZKMvWtLFBmjASDaRsVipxq3WL0/oObbD07ZmvxaHO4cGzw+ZTtbnDKPNDCMKZPgaHJfmdMwMrgwH4k/UfHF6jmTwu74B9B8UQLYMZkvHCpzbojkp3Pd8SllwjkNIcJlO5K4rWJLqfdMxGgJErPY/npnzJFL17KsB9YCl9Z1G7aq0i0I/3S7LESOlgCpvYhioYG8qu1XAHKwZ7mqTqtw40LEqflFeq3N9DetgieIEmtEEFC+7lEfMu9tLqCTFYAxcVreZxzz9cIqRz0/KfK7ddLac8a599WfVqOV2gXErwNSu1hR7g6vByQMHSDMiv10yY7Gq3usHq9/NOc77YPc8hnQeRYAAAAASUVORK5CYII=" alt="lab-classic"></span> <span data-v-5c68598e="" class="inline-block lab-index color-primary bold">
+        实验 1
+      </span> <span data-v-5c68598e="" title="Pandas 数据处理基础入门" class="inline-block lab-name">
+        Pandas 数据处理基础入门
+      </span></div> <div data-v-5c68598e="" class="top-right"><img data-v-5c68598e="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAmdJREFUSA21ls9rU0EQx2c2sWmCBVuphVh/QAsK1rZ4FlQUxR9YqtdeBHvw0GD/AvHkPT0a7EUPBYso2OJBrODNiwcFfyBoEX8heojEIr63znfztnm/+vKerQNhs5vZz8zOzs6EKUGKj6r9rPSYq/m0qA3Ip+ypf5TxrWJ9X7t899eRygdvPTJwZEUWSk9myu4ffZU0XSDSuTid1ho7xDSr8nylcXAKhgMSMVB6PHPW1e5NgXcFNNtNmOqK1UTj0NQ9v6ryT4pL1YrA72SGAyIOYS8YfubqCTzPAQ8Y9Sun+s7kyknG7UmMgWbM3Zf/5HmcVYQrr/biToy33oVmi3kc2K4hXEgSEUYqaqJ37bPF7k47siPh2S3h0mMbD4cTOge28h5RWrcCelvyBbq84wD1FzYH1u0E7LxM8EIzS7fAF0bGabRrGxVVjq69fxrHGMAl2+cfUIB353oHqYOjD9kPf9P4QTc+vQjs9U3Ka+b8pe3DdGvfKZrff4YK4qGVMPz4s3n68rthf46MMBCpH9Ca+/rabDzWs4tuDzWNxME/J8DB5s6l6gJpfRLQsOwpddOD0fPU11Gih9+XaeumThNzhAWet4HLI+BFhZIbBtv5KwGd8EJwtGdnNrhAwFao52LKsdDwaI0sr9Tp+c9v6Tw3EHbANrVIwnRdwnQxDPfPc8zkaHnzaYW5tnK4MmmyCM1CmkY9aW82OIqdMEWMAVP1pFmIETfJSKrfmuV6wna31XeA+s3E0+syInAwbC+AQ+YO/J7915YJQ7COZiE5XEvKrpZTaPpcMw0m1I+hEzlBayPRRvxt+QvzgQD15GCKOwAAAABJRU5ErkJggg==" alt="已学习"></div></div> <!----></div> <br data-v-58426d58=""></div></div></div></div></div></div></div></div></div> <div data-v-d68b6290="" class="drag can-drag" style="display: none;"></div> <div data-v-d68b6290="" class="drag can-not-drag" style="left: 894px;"></div> <div data-v-531a5542="" data-v-bebca12e="" data-v-d68b6290="" class="right-box" style="width: 1664px;"><!----> <!----> <!----> <div data-v-d685947a="" data-v-bebca12e="" class="iframe-env" data-v-531a5542=""><iframe data-v-d685947a="" src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/lab.html" class="iframe"></iframe> <div data-v-d685947a="" class="copyright">
+    *本课程内容由作者授权实验楼发布，未经允许，禁止转载、下载及非法传播
+  </div></div> <!----> <!----></div> <div data-v-37b730a4="" data-v-d68b6290="" class="lab-tools show"><div data-v-37b730a4="" class="toggle-btn"><i data-v-37b730a4="" class="fa fa-angle-double-right"></i></div> <div data-v-18205388="" data-v-37b730a4="" class="left-time"><div data-v-18205388="" class="text">
+    45:30
+  </div> <button data-v-18205388="" type="button" class="btn add-time-btn btn-secondary">
+    延时
+  </button> <!----></div> <!----> <div data-v-37b730a4="" class="divide"></div> <div data-v-c19f4d44="" data-v-37b730a4=""><button data-v-c19f4d44="" type="button" class="btn stop-lab-btn btn-danger"><i data-v-c19f4d44="" class="fa fa-stop"></i>
+    关闭环境
+  </button> <!----> <div data-v-5751383a="" data-v-78fab3f2="" data-v-c19f4d44="" class="base-left-modal" style="display: none;"><div data-v-5751383a="" class="box"><div data-v-5751383a="" class="close"><i data-v-5751383a="" class="fa fa-times"></i></div> <div data-v-5751383a="" class="content"><div data-v-78fab3f2="" data-v-5751383a="">
+    选择想要替换的环境
+    <div data-v-78fab3f2="" data-v-5751383a="" class="modal-sub-title">
+      （被替换的环境将被删除）
+    </div></div></div>  <div data-v-78fab3f2="" data-v-5751383a=""><div data-v-78fab3f2="" data-v-5751383a="" class="items"></div> <div data-v-78fab3f2="" data-v-5751383a="" class="footer"><button data-v-78fab3f2="" data-v-5751383a="" type="button" class="btn confirm-btn btn-primary">
+        确认
+      </button> <div data-v-78fab3f2="" data-v-5751383a="">
+        返回上一步
+      </div></div></div></div></div></div> <div data-v-37b730a4="" class="divide"></div> <!----> <!----> <!----> <!----> <div data-v-e7838ea4="" data-v-37b730a4=""><div data-v-e7838ea4="" class="common-btn"><div data-v-e7838ea4=""><i data-v-e7838ea4="" class="fa fa-arrows-alt"></i>
+    桌面全屏
+  </div></div> </div> <div data-v-37b730a4="" class="divide"></div> <!----> <!----> <!----> <div data-v-e7838ea4="" data-v-37b730a4=""><div data-v-e7838ea4="" class="common-btn"><div data-v-e7838ea4=""><i data-v-e7838ea4="" class="fa fa-bookmark-o"></i>
+    环境使用指南
+  </div></div> </div></div> <div class="messages" data-v-817ed8d0="" data-v-d68b6290=""><!----></div> <!----> <!----> <!----> <div class="hundred-level-modal" data-v-d68b6290=""><!----></div></div> <div data-v-57a4eb3b=""><!----> <!----></div> <div class="risk-validation" data-v-62b04b40="" data-v-57a4eb3b=""><!----></div> <!----> <!----> <!----></div>  <!----> <!----> <div class="flash-message" data-v-6fbfd453="" data-v-57a4eb3b=""><!----></div> <!----></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e,f,g){return {layout:"body-layout",data:[{}],error:a,state:{env:{nodeEnv:"production",apiEndpointV1:f,apiEndpointV2:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2",apiEndpointLocalV1:f,apiEndpointLocalV2:"http:\u002F\u002Fshiyanlou-v2-web-svc\u002Fapi\u002Fv2",cometServiceUrl:"wss:\u002F\u002Fcomet.shiyanlou.com",staticHost:"https:\u002F\u002Fstatic.shiyanlou.com\u002Ffrontend\u002Fstatic",menuHost:f},teacher:{course:{},labs:[],monthData:[],courseUserStatus:{},courseStudents:[],labReports:[],activeLab:{},publishedCourses:[],comments:{},commentStatus:[],questions:{},"mutation-types":{}},labTask:{showLabTask:e,labTask:a,savedEnv:a},library:{navData:{},blocks:[],book:{},chapters:[],chapterContents:{},activeChapterSlug:c,isLiked:b,isMarked:b,"mutation-types":{}},live:{notEndedLiveCourses:{},endedLiveCourses:{},liveLab:{},course:{},liveUserStatus:{},chatroomInfo:{},chatroomUserInfo:{},chatroomAuthPayload:{},"mutation-types":{}},home:{courseCategories:c,swapper:c,classicalCourse:c,recentLouplus:c,popularBootCamp:c,popularPath:c,advertisement:c,advertisementStatus:{height:d,show:b},"mutation-types":{}},mall:{products:{},product:{},order:{},"mutation-types":{}},message:{show:b,type:c,message:c,"mutation-types":{}},messages:{messages:{},"mutation-types":{}},path:{paths:[],path:{},pathUserStatus:c,stage_list:[],"mutation-types":{}},promotion:{promotion:{},coupon:{},"mutation-types":{}},course:{categories:[],courses:{},coursesUserStatus:[],course:{},labStages:[],labDocData:{},labsUserStatus:[],activeLab:{},questions:{},reports:{},isReply:b,answer:{},comments:{},commentsUserStatus:[],replayUser:{},startLabLoading:b,studentMeta:{order:[],data:{}},relatedCourseGroups:[],pathNextCourses:[],recentlyContests:[],relatedChallenges:[],courseTopStudents:[],monthData:[],students:[],runningStudents:[],louplusStudentsRankData:{},"mutation-types":{},actions:{id:{}}},user:{userBaseInfo:{},userPublicInfo:{},userStudyRecords:{},userVisitors:[],userReportStatistic:{},userCoursesStatus:[],userMedals:[],editableUserInfo:{},editUserInfoStatus:{nickname:b,school:b},editUserPassword:{status:b,newPwd:c,oldPwd:c},hundredLevelUserInfo:{},userEmailSettings:{},courseRecordAction:{},oauthStatus:{},certificate:{},userCertificates:[],"mutation-types":{}},contest:{contests:a,contest_detail:a,contests_rank:a,contest_rank:{results:[]},contest_list:[],user_contest_status:{},"mutation-types":{}},question:{questions:{count:d,results:[]},question:{},questionUserStatus:{},relatedQuestions:[],answers:{},answer:{},answersUserStatus:[],isReply:b,"mutation-types":{},utils:{},actions:{question:{},"question.config":{},answer:{},"answer.config":{}}},challenge:{challenges:a,challengesStatus:a,challenge_tags:[],submissions:a,answers:a,lab_document:{},submission:{},challenge:{},modal:b,modal_content:{},"mutation-types":{}},report:{reports:{},report:{},user_status:[],related:[],study_data:{},lab_user_status:{},"mutation-types":{}},bootcamp:{courses:{},categories:[],"mutation-types":{}},search:{results:{},"mutation-types":{}},auth:{loggedIn:e,user:{id:1183262,name:"LOU263208170",avatar_url:"https:\u002F\u002Fdn-simplecloud.shiyanlou.com\u002Fgravatar2v5mHQBVw6yI.jpg?imageView2\u002F1\u002Fw\u002F200\u002Fh\u002F200",is_graduated:b,job_title:a,school:a,level:41,member_type:a,teacher_info:a,labels:[],join_date:"2019-10-29",status:"active",html_url:"\u002Fusers\u002F1183262",api_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002F",courses_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fcourses\u002F",questions_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fquestions\u002F",comments_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fcomments\u002F",contests_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fcontests\u002F",studied_courses_count:15,followed_courses_count:d,published_courses_count:d,marked_books_count:d,is_site_admin:b,is_teacher:b,email:a,is_email_validated:b,phone:"+8618813017082",beans:"44",created_at:"2019-10-29T11:27:24+08:00",study_minutes:1209,free_minutes:d,today_study_minutes:186,bought_courses_count:1,study_labs_count:256,basic_member_expired_at:a,plus_member_expired_at:a,premium_member_expired_at:a,invitation_html_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fregister?inviter=NTY0MzIwMTk1OTM3",member_invitation_code:c,have_saved_vm:b,enterprise_html_url:c,unread_messages_count:g,is_enterprise_admin:b,session_id:"5a2cfa65-fc80-4e84-a420-d06433e55aa4.S_65c8XreZj83PHvVGwhvwXTDoc",is_set_password:e,roles:[],abilities:[],in_bailou_club:b,course_quota:g,is_subscribe_mp:b},isChecked:b,risk:{isRisk:b},authTokens:{},beans:d,signActive:"signInForm",token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNb0h1bWZGeWt3bFdmT2JoNVVSSXpvNEdrV0dHVFZpdSIsImlhdCI6MTU3Mzc5MzAyNCwiZXhwIjoxNTczODc5NDI0fQ.HtTehFkNNfca0egunXCu9PE0rPLrrjqQp7Zg42vQqOk","mutation-types":{},redirect:"\u002Fcourses\u002F906\u002Flearning\u002F"},sideBox:{recentLouplus:[],recentActivity:[],followedPath:[],"mutation-types":{}},activity:{activity:{start_at:a,end_at:a,member_config:a,bootcamp_config:a,louplus_config:a},rules:[{product_type:"premium",discount_type:"present",derate_money:d,second_kill_price:a,second_kill_amount:d,extra_config:{progress:d,quota:d},present_days:30,discount_percent:"1.000",course_ids:[],buy_days:365}],modal:{activity_id:a,start_at:a,end_at:a,config:a},"mutation-types":{}},louplus:{louplusInfo:{},louplusList:[],louplusUserStatus:{},"mutation-types":{}}},serverRendered:e}}(null,false,"",0,true,"https:\u002F\u002Fwww.shiyanlou.com",2));</script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/f3a337105fb6129b39d1.js.下载" defer=""></script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/13652036f3502b0c6db7.js.下载" defer=""></script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/cc58aae2d5b624e45e75.js.下载" defer=""></script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/34e4120db4a53410cbcd.js.下载" defer=""></script><script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/0eed17603f033879ebbc.js.下载" defer=""></script>
+  
+
+<script src="./Pandas 数据处理基础课程 - Pandas 数据处理基础入门 - 实验楼_files/guide.js.下载"></script><script></script></body></html>
