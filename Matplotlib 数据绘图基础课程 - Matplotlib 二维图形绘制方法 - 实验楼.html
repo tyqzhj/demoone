@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://www.shiyanlou.com/courses/1093/learning/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+    <title data-n-head="true">Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼</title><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta data-n-head="true" data-hid="keywords" name="keywords" content="实验楼,IT培训,IT教育,编程,在线编程,Linux,Linux教程,Linux操作系统,
+        Python,Python教程,Python基础教程,Java,Java编程,C语言,大数据,Node.js,
+        Hadoop,PHP,Docker,Git,R,SQL,MongoDB,Redis,Swift,Spark,在线实验,
+        IT在线教育,编程入门,项目训练,项目实践,webIDE,软件开发"><meta data-n-head="true" data-hid="description" name="description" content="实验楼是国内领先的IT在线编程及在线实训学习平台，专业导师提供精选的实践项目，
+        创新的技术使得学习者无需配置繁琐的本地环境，随时在线流畅使用。以就业为导向，
+        提供编程、运维、测试、云计算、大数据、数据库等全面的IT技术动手实践环境，
+        提供Linux、Python、Java、C语言、Node.js、Hadoop、PHP、Docker、Git、
+        R、SQL、MongoDB、Redis、Swift、Spark等千门热门课程。"><link data-n-head="true" rel="icon" type="image/x-icon" href="https://www.shiyanlou.com/favicon.ico"><link data-n-head="true" rel="stylesheet" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/font-awesome.min.css"><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/nvc.js.下载"></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/nvcPrepare.jsonp"></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/121.js.下载" id="AWSC_uabModule"></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/um.js.下载" id="AWSC_umidPCModule"></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/nvc.js.下载"></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/nvcPrepare(1).jsonp"></script><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/f3a337105fb6129b39d1.js.下载" as="script"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/cc58aae2d5b624e45e75.js.下载" as="script"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/34e4120db4a53410cbcd.js.下载" as="script"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/e37290ea5e6d3a26020d.css" as="style"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/0eed17603f033879ebbc.js.下载" as="script"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/b67002aa79ff614d5492.css" as="style"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/fc69b49de4534c50867a.js.下载" as="script"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/cb58c84934d2509bce65.css" as="style"><link rel="preload" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/29ea2ed2528c967b98f4.js.下载" as="script"><link rel="stylesheet" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/e37290ea5e6d3a26020d.css"><link rel="stylesheet" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/b67002aa79ff614d5492.css"><link rel="stylesheet" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/cb58c84934d2509bce65.css">
+  <script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/6920e455a4bd0bff748c.js.下载"></script><script async="" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/analytics.js.下载" charset="utf-8"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/884c42255b367edcce77.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/84a91dbb77180af353a5.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/fcb0a4d388ff88f1d079.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/96baeaa38e2c0d8f1223.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/4a6f40408dc7dbdcec6a.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/6aa8892d2c9a900c2912.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/4d55cd000b0a6fbef621.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/53676e5f80b599333baa.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/af05d8f36f4ba1dbac47.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/964623798da12604013c.js.下载"></script><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/57e24fa8044cda0ae313.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/5f5d69018ae63e8683e2.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/4590403065ca12368adf.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/42d29d8d300e9cc37b67.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/6e94fda438fe53906a38.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/c100797c190658b7de79.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/0399672ed845ba56cea6.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/81424929e743846dc783.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/ba143f8934471e69b121.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/e97004f3fa2b3c57c1cf.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/ed5efd98e6e0ac4cfef7.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/cae75fbf4d57302ff8f3.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/4a4eb9d06e66e3beadcc.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/04c90885509052e1a39d.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/94b9a00a97ed3428701a.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/f5bac2c99a5b28416a0f.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/c8f480a07e6bcb2f639c.js.下载"></script><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/fa53ae7bdb5589798911.js.下载"></script><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/78f12ae12e7792b2e80b.js.下载"></script><link rel="stylesheet" type="text/css" href="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/4f1eb9016cbba5f02532.css"><script charset="utf-8" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/13652036f3502b0c6db7.js.下载"></script></head>
+  <body class="" data-modal-open-count="0">
+    <div id="__nuxt"><div id="__layout"><div data-v-57a4eb3b=""><!---->  <div data-v-57a4eb3b="" class="body"><!----> <div data-v-d68b6290="" class="lab-operation" data-v-57a4eb3b=""><div data-v-00d8b544="" data-v-d68b6290="" class="section-box-root"><div data-v-4c89ebd0="" data-v-00d8b544="" class="wx-service-modal-root"><!----></div> <div data-v-48901454="" data-v-00d8b544="" class="left-box" style="width: 205px;"><div data-v-48901454="" class="top-bar"><div data-v-00d8b544="" data-v-48901454="" class="top-bar"><a data-v-00d8b544="" data-v-48901454="" href="https://www.shiyanlou.com/courses/1093" class="home-btn"><img data-v-00d8b544="" data-v-48901454="" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/9f0571e.png"></a> <span data-v-00d8b544="" data-v-48901454="" class="course-name">
+        Matplotlib 二维图形绘制方法
+      </span> <div data-v-00d8b544="" data-v-48901454="" class="sections-list-btn"><img data-v-00d8b544="" data-v-48901454="" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/01a1ffb.svg">
+        章节列表
+      </div></div></div> <div data-v-48901454="" class="box-container relative"><div data-v-48901454="" class="left-bar"><div data-v-00d8b544="" data-v-48901454="" class="left-bar"><div data-v-00d8b544="" data-v-48901454="" class="menu-tabs"><div data-v-00d8b544="" data-v-48901454="" class="item font-16 active">
+          步骤
+        </div><div data-v-00d8b544="" data-v-48901454="" class="item font-16">
+          报告
+        </div><div data-v-00d8b544="" data-v-48901454="" class="item font-16">
+          讨论
+        </div></div> <div data-v-00d8b544="" data-v-48901454="" class="menu-btns"><!----> <div data-v-00d8b544="" data-v-48901454="" title="" class="item" data-original-title="新手指南"><img data-v-00d8b544="" data-v-48901454="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0ZGRiIgc3Ryb2tlPSIjQzZDNkM2IiBzdHJva2Utd2lkdGg9IjEuMyIgZD0iTTEwIDE3LjgzOWw4LjA2NC0xLjQ5M2EuMzUuMzUgMCAwIDAgLjI4Ni0uMzQ0di0xMy4zYS4zNS4zNSAwIDAgMC0uNDE0LS4zNDRsLTcuOCAxLjQ0NGMtLjEzNi4wMTctLjEzNi4wMTctLjI3MyAwbC03LjgtMS40NDRhLjM1LjM1IDAgMCAwLS40MTMuMzQ0djEzLjNjMCAuMTY4LjEyLjMxMy4yODYuMzQ0TDEwIDE3LjgzOXoiLz4KICAgICAgICA8cGF0aCBmaWxsPSIjQzZDNkM2IiBkPSJNOS41IDEzLjVoMXYxaC0xdi0xem0xLjcxNy00LjY5NGMwLS43MDItLjQyOC0xLjE5Mi0xLjI3NS0xLjE5Mi0uNjEyIDAtMS4xNTkuMjkxLTEuNjc4Ljg2NUw3LjUgNy43NjRDOC4xNzEgNy4wMTcgOC45OTQgNi41IDEwLjA5NCA2LjVjMS40MzUgMCAyLjQwNi44MDggMi40MDYgMi4xOTggMCAxLjc3OC0yLjI5IDIuMDgxLTIuMDUgMy44MDJIOS4yN2MtLjMxMS0xLjkyOCAxLjk0Ny0yLjQxNyAxLjk0Ny0zLjY5NHoiLz4KICAgIDwvZz4KPC9zdmc+Cg=="></div> <div data-v-00d8b544="" data-v-48901454="" title="服务号" class="item"><img data-v-00d8b544="" data-v-48901454="" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/76a43f5.svg"></div> <div data-v-00d8b544="" data-v-48901454="" class="item" role="button"><img data-v-00d8b544="" data-v-48901454="" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/cc491c4.svg" title="" data-original-title="纠错"></div> <div data-v-00d8b544="" data-v-48901454="" class="item"><img data-v-00d8b544="" data-v-48901454="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjQzZDNkM2Ij4KICAgICAgICA8cGF0aCBmaWxsPSIjQzZDNkM2IiBzdHJva2Utd2lkdGg9Ii43IiBkPSJNMTMuOTIyIDQuMjN2Ni4xNDhhLjU1LjU1IDAgMCAxLS41NS41NUg4LjcwNHY1LjQ3OGEuNTUuNTUgMCAwIDEtLjU1LjU1SDMuNWEuMTUuMTUgMCAwIDAtLjE1LjE1di40MzRjMCAuMDgzLjA2Ny4xNS4xNS4xNWg1LjgwMnYtNS40NzhhLjU1LjU1IDAgMCAxIC41NS0uNTVoNC42NjdWNS41MTRhLjU1LjU1IDAgMCAxIC41NS0uNTVIMTkuNWEuMTUuMTUgMCAwIDAgLjE1LS4xNVY0LjM4YS4xNS4xNSAwIDAgMC0uMTUtLjE1aC01LjU3OHoiLz4KICAgICAgICA8cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuMiIgZD0iTTYuMzUgNS4xM0w0Ljc0OCA0LjA0NGMtLjE2Ni0uMTQ4LS4xNjYtLjE0OC0uMjQxLS4zMjZhLjYxMy42MTMgMCAwIDEgLjMzMy0uNzQ1bC4xMDktLjAzNiA0LjYzNS0xLjA5MmEuNzIuNzIgMCAwIDEgLjkyNi42MjRsLjU1MyA0LjYwMWMuMDAyLjE1Ny4wMDIuMTU3LS4wNS4zMTFhLjYxLjYxIDAgMCAxLS44ODguMjY4bC0xLjM5Mi0uODljLS41MDkuODgtMS41OTUgMi4yMjgtMi42MzIgMy4wNi0xLjM5IDEuMTE3LTIuODk4IDEuODc1LTQuNTIyIDIuMjdsLS4zOS0xLjEyOWMxLjc5OS0uODE2IDMuMDUzLTEuNzI0IDMuNzctMi43MDdBOC4xMDYgOC4xMDYgMCAwIDAgNi4zNSA1LjEyOXoiLz4KICAgIDwvZz4KPC9zdmc+Cg=="> <!----></div></div></div></div> <div data-v-48901454="" class="box-content relative full-width"><div data-v-659422e8="" data-v-00d8b544="" class="lab-document" data-v-48901454=""><!----> <div data-v-198dce4b="" data-v-659422e8="" class="single-document" width="205"><div data-v-198dce4b="" class="content"><!----> <div data-v-198dce4b=""><div data-v-198dce4b="" role="alert" aria-live="polite" aria-atomic="true" class="alert rules alert-info"><!----><p data-v-198dce4b="">说明：</p> <div data-v-198dce4b="">
+            1. 本章节实验步骤已融合在右侧环境，请开启环境后直接在右侧环境的 空白单元格 处输入代码做实验
+          </div> <div data-v-198dce4b="">
+            2. 若想仅查看实验步骤，请点击下方展开实验步骤
+          </div></div> <div data-v-198dce4b="" class="toggle-doc">
+          点击收起步骤
+          <i data-v-198dce4b="" class="fa fa-angle-up"></i></div> <div data-v-198dce4b="" class="markdown-body" style=""><h2 id="matplotlib-二维图像绘制方法">Matplotlib 二维图像绘制方法</h2>
+<hr>
+<h4 id="介绍">介绍</h4>
+<p>Matplotlib 是支持 Python 语言的开源绘图库，因为其支持丰富的绘图类型、简单的绘图方式以及完善的接口文档，深受 Python 工程师、科研学者、数据工程师等各类人士的喜欢。本次实验课程中，我们将学会使用 Matplotlib 绘图的方法和技巧。</p>
+<h4 id="知识点">知识点</h4>
+<ul>
+<li>二维图形绘制</li>
+<li>子图及组合图形</li>
+<li>兼容 MATLAB 风格 API</li>
+</ul>
+<hr>
+<img src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/document-uid214893labid7506timestamp1534942536511.png">
+
+<p>在使用机器学习方法解决问题的过程中，一定会遇到需要针对数据进行绘图的场景。Matplotlib 是支持 Python 语言的开源绘图库，因为其支持丰富的绘图类型、简单的绘图方式以及完善的接口文档，深受 Python 工程师、科研学者、数据工程师等各类人士的喜欢。Matplotlib 拥有着十分活跃的社区以及稳定的版本迭代，当我们在学习机器学习的课程时，掌握 Matplotlib 的使用无疑是最重要的准备工作之一。</p>
+<p>在使用 Notebook 环境绘图时，需要先运行 Jupyter Notebook 的魔术命令 <code>%matplotlib inline</code>。这条命令的作用是将 Matplotlib 绘制的图形嵌入在当前页面中。而在桌面环境中绘图时，不需要添加此命令，而是在全部绘图代码之后追加 <code>plt.show()</code>。</p>
+<p><i class="fa fa-arrow-circle-down"> 教学代码</i>：</p>
+<pre><code class="hljs python"><span class="hljs-tag">%<span class="hljs-selector-tag">matplotlib</span></span> inline
+</code></pre><p><i class="fa fa-arrow-circle-down"> 动手练习</i>｜如果你对课程所使用的实验楼 Notebook 在线环境并不熟悉，可以先学习 <a href="https://www.shiyanlou.com/courses/1322" target="_blank"><i class="fa fa-external-link-square"> 使用指南课程</i></a>。</p>
+<pre><code class="hljs python"><span class="hljs-meta"># 在空白单元格中重复输入上面的教学代码练习，亲自动手，不要复制粘贴</span>
+</code></pre><h3 id="简单图形绘制">简单图形绘制</h3>
+<p>使用 Matplotlib 提供的面向对象 API，需要导入 <code>pyplot</code> 模块，并约定简称为 <code>plt</code>。</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt
+</code></pre><pre><code class="hljs python">
+</code></pre><p>我们都说了，Matplotlib 是一个非常简单而又完善的开源绘图库。那么它到底有多简单呢？下面，我们通过 1 行代码绘制一张简单的折线图。</p>
+<pre><code class="hljs python">plt.plot([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>])
+</code></pre><pre><code class="hljs python">
+</code></pre><p>可以看到，一张和山峰样式相似的折线图就绘制出来了。</p>
+<p>前面，我们从 Matplotlib 中导入了 <code>pyplot</code> 绘图模块，并将其简称为 <code>plt</code>。<code>pyplot</code> 模块是 Matplotlib 最核心的模块，几乎所有样式的 2D 图形都是经过该模块绘制出来的。这里简称其为 <code>plt</code> 是约定俗成的，希望你也这样书写代码，以便拥有更好的可读性。</p>
+<p><code>plt.plot()</code> 是 <code>pyplot</code> 模块下面的直线绘制（折线图）方法类。示例中包含了一个 <code>[1, 2, 3, 2, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]</code> 列表，Matplotlib 会默认将该列表作为 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathdefault" style="margin-right: 0.03588em;">y</span></span></span></span></span> 值，而 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">x</span></span></span></span></span> 值会从 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">0</span></span></span></span></span> 开始依次递增。</p>
+<p>当然，如果你需要自定义横坐标值，只需要传入两个列表即可。如下方代码，我们自定义横坐标刻度从 2 开始。</p>
+<pre><code class="hljs python">plt.plot([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>],
+         [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>])
+</code></pre><pre><code class="hljs python">
+</code></pre><p>上面演示了如何绘制一个简单的折线图。那么，除了折线图，我们平常还要绘制柱状图、散点图、饼状图等等。这些图应该怎样绘制呢？</p>
+<p><code>pyplot</code> 模块中 <code>pyplot.plot</code> 方法是用来绘制折线图的。你应该会很容易联想到，更改后面的方法类名就可以更改图形的样式。的确，在 Matplotlib 中，大部分图形样式的绘制方法都存在于 <code>pyplot</code> 模块中。例如：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>matplotlib.pyplot.angle_spectrum</code></td>
+<td>绘制电子波谱图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.bar</code></td>
+<td>绘制柱状图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.barh</code></td>
+<td>绘制直方图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.broken_barh</code></td>
+<td>绘制水平直方图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.contour</code></td>
+<td>绘制等高线图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.errorbar</code></td>
+<td>绘制误差线</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.hexbin</code></td>
+<td>绘制六边形图案</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.hist</code></td>
+<td>绘制柱形图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.hist2d</code></td>
+<td>绘制水平柱状图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.pie</code></td>
+<td>绘制饼状图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.quiver</code></td>
+<td>绘制量场图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.scatter</code></td>
+<td>散点图</td>
+</tr>
+<tr>
+<td><code>matplotlib.pyplot.specgram</code></td>
+<td>绘制光谱图</td>
+</tr>
+</tbody></table>
+<p>下面，我们参考折线图的绘制方法，尝试绘制几个简单的图形。</p>
+<p><code>matplotlib.pyplot.plot(*args, **kwargs)</code> 方法严格来讲可以绘制线形图或者样本标记。其中，<code>*args</code> 允许输入单个 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathdefault" style="margin-right: 0.03588em;">y</span></span></span></span></span> 值或 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x, y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault" style="margin-right: 0.03588em;">y</span></span></span></span></span> 值。</p>
+<p> 例如，我们这里绘制一张自定义 <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x, y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault" style="margin-right: 0.03588em;">y</span></span></span></span></span> 的正弦曲线图。</p>
+<pre><code class="hljs python">import numpy <span class="hljs-keyword">as</span> np  <span class="hljs-comment"># 载入数值计算模块</span>
+
+<span class="hljs-comment"># 在 -2PI 和 2PI 之间等间距生成 1000 个值，也就是 X 坐标</span>
+X = np.linspace(<span class="hljs-number">-2</span>*np.<span class="hljs-literal">pi</span>, <span class="hljs-number">2</span>*np.<span class="hljs-literal">pi</span>, <span class="hljs-number">1000</span>)
+<span class="hljs-comment"># 计算 y 坐标</span>
+y = np.<span class="hljs-built_in">sin</span>(X)
+
+<span class="hljs-comment"># 向方法中 `*args` 输入 X，y 坐标</span>
+plt.plot(X, y)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>正弦曲线就绘制出来了。但值得注意的是，<code>pyplot.plot</code> 在这里绘制的正弦曲线，实际上不是严格意义上的曲线图，而在两点之间依旧是直线。这里看起来像曲线是因为样本点相互挨得很近。</p>
+<p>柱形图 <code>matplotlib.pyplot.bar(*args, **kwargs)</code> 大家应该都非常了解了。这里，我们直接用上面的代码，仅把 <code>plt.plot(X, y)</code> 改成 <code>plt.bar(X, y)</code> 试一下。</p>
+<pre><code class="hljs python">plt.bar([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+</code></pre><pre><code class="hljs python">
+</code></pre><p>散点图 <code>matplotlib.pyplot.scatter(*args, **kwargs)</code> 就是呈现在二维平面的一些点，这种图像的需求也是非常常见的。比如，我们通过 GPS 采集的数据点，它会包含经度以及纬度两个值，这样的情况就可以绘制成散点图。</p>
+<pre><code class="hljs python"># X,<span class="hljs-symbol">y</span> 的坐标均有 numpy 在 <span class="hljs-number">0</span> 到 <span class="hljs-number">1</span> 中随机生成 <span class="hljs-number">1000</span> 个值
+X = np.<span class="hljs-built_in">random</span>.ranf(<span class="hljs-number">1000</span>)
+<span class="hljs-symbol">y</span> = np.<span class="hljs-built_in">random</span>.ranf(<span class="hljs-number">1000</span>)
+# 向方法中 `*args` 输入 X，<span class="hljs-symbol">y</span> 坐标
+plt.scatter(X, <span class="hljs-symbol">y</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>饼状图 <code>matplotlib.pyplot.pie(*args, **kwargs)</code> 在有限列表以百分比呈现时特别有用，你可以很清晰地看出来各类别之间的大小关系，以及各类别占总体的比例。</p>
+<pre><code class="hljs python">plt.pie([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+</code></pre><pre><code class="hljs python">
+</code></pre><p>量场图 <code>matplotlib.pyplot.quiver(*args, **kwargs)</code> 就是由向量组成的图像，在气象学等方面被广泛应用。从图像的角度来看，量场图就是带方向的箭头符号。</p>
+<pre><code class="hljs python">X, y = np.mgrid[<span class="hljs-number">0</span>:<span class="hljs-number">10</span>, <span class="hljs-number">0</span>:<span class="hljs-number">10</span>]
+plt.quiver(X, y)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>中学学习地理的时候，我们就知道等高线了。等高线图 <code>matplotlib.pyplot.contourf(*args, **kwargs)</code> 是工程领域经常接触的一类图，它的绘制过程稍微复杂一些。</p>
+<pre><code class="hljs python"># 生成网格矩阵
+x = np.linspace(<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">500</span>)
+y = np.linspace(<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">500</span>)
+X, Y = np.meshgrid(x, y)
+# 等高线计算公式
+Z = (<span class="hljs-number">1</span> - X / <span class="hljs-number">2</span> + X ** <span class="hljs-number">3</span> + Y ** <span class="hljs-number">4</span>) * np.exp(-X ** <span class="hljs-number">2</span> - Y ** <span class="hljs-number">2</span>)
+
+plt.contourf(X, Y, Z)
+</code></pre><pre><code class="hljs python">
+</code></pre><h3 id="定义图形样式">定义图形样式</h3>
+<p>上面，我们绘制了简单的基础图形，但这些图形都不美观。你可以通过更多的参数来让图形变得更漂亮。</p>
+<p>我们已经知道了，线形图通过 <code>matplotlib.pyplot.plot(*args, **kwargs)</code> 方法绘出。其中，<code>args</code> 代表数据输入，而 <code>kwargs</code> 的部分就是用于设置样式参数了。</p>
+<p>二维线形图 <a href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.plot.html" target="_blank"><i class="fa fa-external-link-square"> 包含的参数</i></a> 超过 40 余项，其中常用的也有 10 余项，选取一些比较有代表性的参数列举如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>alpha=</code></td>
+<td>设置线型的透明度，从 0.0 到 1.0</td>
+</tr>
+<tr>
+<td><code>color=</code></td>
+<td>设置线型的颜色</td>
+</tr>
+<tr>
+<td><code>fillstyle=</code></td>
+<td>设置线型的填充样式</td>
+</tr>
+<tr>
+<td><code>linestyle=</code></td>
+<td>设置线型的样式</td>
+</tr>
+<tr>
+<td><code>linewidth=</code></td>
+<td>设置线型的宽度</td>
+</tr>
+<tr>
+<td><code>marker=</code></td>
+<td>设置标记点的样式</td>
+</tr>
+<tr>
+<td>……</td>
+<td>……</td>
+</tr>
+</tbody></table>
+<p>至于每一项参数包含的设置选项，大家需要通过 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html" target="_blank"><i class="fa fa-external-link-square"> 官方文档</i></a> 详细了解。</p>
+<p>下面，我们重新绘制一个三角函数图形。</p>
+<pre><code class="hljs python"><span class="hljs-comment"># 在 -2PI 和 2PI 之间等间距生成 1000 个值，也就是 X 坐标</span>
+X = np.linspace(-2 * np.pi, 2 * np.pi, 1000)
+<span class="hljs-comment"># 计算 sin() 对应的纵坐标</span>
+y1 = np.sin(X)
+<span class="hljs-comment"># 计算 cos() 对应的纵坐标</span>
+y2 = np.cos(X)
+
+<span class="hljs-comment"># 向方法中 `*args` 输入 X，y 坐标</span>
+plt.plot(X, y1, <span class="hljs-attribute">color</span>=<span class="hljs-string">'r'</span>, <span class="hljs-attribute">linestyle</span>=<span class="hljs-string">'--'</span>, <span class="hljs-attribute">linewidth</span>=2, <span class="hljs-attribute">alpha</span>=0.8)
+plt.plot(X, y2, <span class="hljs-attribute">color</span>=<span class="hljs-string">'b'</span>, <span class="hljs-attribute">linestyle</span>=<span class="hljs-string">'-'</span>, <span class="hljs-attribute">linewidth</span>=2)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>散点图也是相似的，它们的很多样式参数都是大同小异，需要大家阅读 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html" target="_blank"><i class="fa fa-external-link-square"> 官方文档</i></a> 详细了解。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>s=</code></td>
+<td>散点大小</td>
+</tr>
+<tr>
+<td><code>c=</code></td>
+<td>散点颜色</td>
+</tr>
+<tr>
+<td><code>marker=</code></td>
+<td>散点样式</td>
+</tr>
+<tr>
+<td><code>cmap=</code></td>
+<td>定义多类别散点的颜色</td>
+</tr>
+<tr>
+<td><code>alpha=</code></td>
+<td>点的透明度</td>
+</tr>
+<tr>
+<td><code>edgecolors=</code></td>
+<td>散点边缘颜色</td>
+</tr>
+</tbody></table>
+<pre><code class="hljs python"><span class="hljs-comment"># 生成随机数据</span>
+x = np.random.rand(100)
+y = np.random.rand(100)
+colors = np.random.rand(100)
+size = np.random.normal(50, 60, 10)
+
+plt.scatter(x, y, s=size, c=colors)  <span class="hljs-comment"># 绘制散点图</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>饼状图通过 <code>matplotlib.pyplot.pie()</code> 绘出。我们也可以进一步设置它的颜色、标签、阴影等各类样式。下面就绘出一个示例。</p>
+<pre><code class="hljs python"><span class="hljs-keyword">label</span><span class="bash"> = <span class="hljs-string">'Cat'</span>, <span class="hljs-string">'Dog'</span>, <span class="hljs-string">'Cattle'</span>, <span class="hljs-string">'Sheep'</span>, <span class="hljs-string">'Horse'</span>  <span class="hljs-comment"># 各类别标签</span></span>
+color = <span class="hljs-string">'r'</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'r'</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'y'</span>  <span class="hljs-comment"># 各类别颜色</span>
+size = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]  <span class="hljs-comment"># 各类别占比</span>
+explode = (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>)  <span class="hljs-comment"># 各类别的偏移半径</span>
+<span class="hljs-comment"># 绘制饼状图</span>
+plt.pie(size, colors=color, explode=explode,
+        labels=<span class="hljs-keyword">label</span><span class="bash">, shadow=True, autopct=<span class="hljs-string">'%1.1f%%'</span>)</span>
+<span class="hljs-comment"># 饼状图呈正圆</span>
+plt.axis(<span class="hljs-string">'equal'</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><h3 id="组合图形样式">组合图形样式</h3>
+<p>上面演示了单个简单图像的绘制。实际上，我们往往会遇到将几种类型的一样的图放在一张图内显示，也就是组合图的绘制。其实很简单，你只需要将所需图形的代码放置在一起就可以了，比如绘制一张包含柱形图和折线图的组合图。</p>
+<pre><code class="hljs python">x = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">17</span>, <span class="hljs-number">19</span>]
+y_bar = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">11</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]
+y_line = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+
+plt.bar(x, y_bar)
+plt.plot(x, y_line, <span class="hljs-string">'-o'</span>, color=<span class="hljs-string">'y'</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>当然，并不是任何的代码放在一起都是组合图。上面，两张图的横坐标必须共享，才能够被 Matplotlib 自动判断为组合图效果。</p>
+<h3 id="定义图形位置">定义图形位置</h3>
+<p>在图形的绘制过程中，你可能需要调整图形的位置，或者把几张单独的图形拼接在一起。此时，我们就需要引入 <code>plt.figure</code> 图形对象了。</p>
+<p>下面，我们绘制一张自定义位置的图形。</p>
+<pre><code class="hljs python">x = np.linspace(0, 10, 20)  <span class="hljs-comment"># 生成数据</span>
+y = x * x + 2
+
+fig = plt.figure()  <span class="hljs-comment"># 新建图形对象</span>
+axes = fig.add_axes([0.5, 0.5, 0.8, 0.8])  <span class="hljs-comment"># 控制画布的左, 下, 宽度, 高度</span>
+axes.plot(x, y, 'r')
+</code></pre><pre><code class="hljs python">
+</code></pre><p>上面的绘图代码中，你可能会对 <code>figure</code> 和 <code>axes</code> 产生疑问。Matplotlib 的 API 设计的非常符合常理，在这里，<code>figure</code> 相当于绘画用的画板，而 <code>axes</code> 则相当于铺在画板上的画布。我们将图像绘制在画布上，于是就有了 <code>plot</code>，<code>set_xlabel</code> 等操作。</p>
+<p><img src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/document-uid214893labid7506timestamp1543470230951.png"></p>
+<p>借助于图形对象，我们可以实现大图套小图的效果。</p>
+<pre><code class="hljs python">fig = plt.figure()  <span class="hljs-comment"># 新建画板</span>
+axes1 = fig.add_axes([0.1, 0.1, 0.8, 0.8])  <span class="hljs-comment"># 大画布</span>
+axes2 = fig.add_axes([0.2, 0.5, 0.4, 0.3])  <span class="hljs-comment"># 小画布</span>
+
+axes1.plot(x, y, 'r')  <span class="hljs-comment"># 大画布</span>
+axes2.plot(y, x, 'g')  <span class="hljs-comment"># 小画布</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>上面的绘图代码中，你已经学会了使用 <code>add_axes()</code> 方法向我们设置的画板 <code>figure</code> 中添加画布 <code>axes</code>。在 Matplotlib 中，还有一种添加画布的方式，那就是 <code>plt.subplots()</code>，它和 <code>axes</code> 都等同于画布。</p>
+<pre><code class="hljs python">fig, axes = plt.subplots()
+axes.plot(<span class="hljs-symbol">x</span>, <span class="hljs-symbol">y</span>, <span class="hljs-string">'r'</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>借助于 <code>plt.subplots()</code>，我们就可以实现子图的绘制，也就是将多张图按一定顺序拼接在一起。</p>
+<pre><code class="hljs python">fig, axes = plt.subplots(nrows=<span class="hljs-number">1</span>, ncols=<span class="hljs-number">2</span>)  # 子图为 <span class="hljs-number">1</span> 行，<span class="hljs-number">2</span> 列
+<span class="hljs-keyword">for</span> ax <span class="hljs-keyword">in</span> axes:
+    ax.plot(x, y, <span class="hljs-string">'r'</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>通过设置 <code>plt.subplots</code> 的参数，可以实现调节画布尺寸和显示精度。</p>
+<pre><code class="hljs python">fig, <span class="hljs-attr">axes</span> = plt.subplots(
+    <span class="hljs-attr">figsize=(16,</span> <span class="hljs-number">9</span>), <span class="hljs-attr">dpi=50)</span>  <span class="hljs-comment"># 通过 figsize 调节尺寸, dpi 调节显示精度</span>
+axes.plot(x, y, 'r')
+</code></pre><pre><code class="hljs python">
+</code></pre><h3 id="规范绘图方法">规范绘图方法</h3>
+<p>上面，我们已经入门了 Matplotlib 的绘图方法。由于 Matplotlib 的灵活性，很多方法都可以画出图形来。但为了避免「想怎么画，就怎么画」的问题，我们需要根据自己的习惯，约定一套比较规范的绘图方法。</p>
+<p>首先，任何图形的绘制，都建议通过 <code>plt.figure()</code> 或者 <code>plt.subplots()</code> 管理一个完整的图形对象。而不是简单使用一条语句，例如 <code>plt.plot(...)</code> 来绘图。</p>
+<p>管理一个完整的图形对象，有很多好处。在图形图形的基础上，给后期添加图例，图形样式，标注等预留了很大的空间。除此之外。代码看起来也更加规范，可读性更强。</p>
+<p>接下来，我们就通过几组例子来演示规范的绘图方法。</p>
+<h4 id="添加图标题、图例">添加图标题、图例</h4>
+<p>绘制包含图标题、坐标轴标题以及图例的图形，举例如下：</p>
+<pre><code class="hljs python">fig, <span class="hljs-built_in">axes</span> = plt.subplots()
+
+<span class="hljs-built_in">axes</span>.set_xlabel('x <span class="hljs-built_in">label</span>')  # 横轴名称
+<span class="hljs-built_in">axes</span>.set_ylabel('y <span class="hljs-built_in">label</span>')
+<span class="hljs-built_in">axes</span>.set_title('<span class="hljs-built_in">title</span>')  # 图形名称
+
+<span class="hljs-built_in">axes</span>.plot(x, x**<span class="hljs-number">2</span>)
+<span class="hljs-built_in">axes</span>.plot(x, x**<span class="hljs-number">3</span>)
+<span class="hljs-built_in">axes</span>.<span class="hljs-built_in">legend</span>([<span class="hljs-string">"y = x**2"</span>, <span class="hljs-string">"y = x**3"</span>], loc=<span class="hljs-number">0</span>)  # 图例
+</code></pre><pre><code class="hljs python">
+</code></pre><p>图例中的 <code>loc</code> 参数标记图例位置，<code>1，2，3，4</code> 依次代表：右上角、左上角、左下角，右下角；<code>0</code> 代表自适应</p>
+<h4 id="线型、颜色、透明度">线型、颜色、透明度</h4>
+<p>在 Matplotlib 中，你可以设置线的颜色、透明度等其他属性。</p>
+<pre><code class="hljs python">fig, axes = plt.subplots()
+
+axes.plot(x, x+1, <span class="hljs-attribute">color</span>=<span class="hljs-string">"red"</span>, <span class="hljs-attribute">alpha</span>=0.5)
+axes.plot(x, x+2, <span class="hljs-attribute">color</span>=<span class="hljs-string">"#1155dd"</span>)
+axes.plot(x, x+3, <span class="hljs-attribute">color</span>=<span class="hljs-string">"#15cc55"</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>而对于线型而言，除了实线、虚线之外，还有很多丰富的线型可供选择。</p>
+<pre><code class="hljs python">fig, ax = plt.subplots(figsize=(12, 6))
+
+<span class="hljs-comment"># 线宽</span>
+ax.plot(x, x+1, <span class="hljs-attribute">color</span>=<span class="hljs-string">"blue"</span>, <span class="hljs-attribute">linewidth</span>=0.25)
+ax.plot(x, x+2, <span class="hljs-attribute">color</span>=<span class="hljs-string">"blue"</span>, <span class="hljs-attribute">linewidth</span>=0.50)
+ax.plot(x, x+3, <span class="hljs-attribute">color</span>=<span class="hljs-string">"blue"</span>, <span class="hljs-attribute">linewidth</span>=1.00)
+ax.plot(x, x+4, <span class="hljs-attribute">color</span>=<span class="hljs-string">"blue"</span>, <span class="hljs-attribute">linewidth</span>=2.00)
+
+<span class="hljs-comment"># 虚线类型</span>
+ax.plot(x, x+5, <span class="hljs-attribute">color</span>=<span class="hljs-string">"red"</span>, <span class="hljs-attribute">lw</span>=2, <span class="hljs-attribute">linestyle</span>=<span class="hljs-string">'-'</span>)
+ax.plot(x, x+6, <span class="hljs-attribute">color</span>=<span class="hljs-string">"red"</span>, <span class="hljs-attribute">lw</span>=2, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'-.'</span>)
+ax.plot(x, x+7, <span class="hljs-attribute">color</span>=<span class="hljs-string">"red"</span>, <span class="hljs-attribute">lw</span>=2, <span class="hljs-attribute">ls</span>=<span class="hljs-string">':'</span>)
+
+<span class="hljs-comment"># 虚线交错宽度</span>
+line, = ax.plot(x, x+8, <span class="hljs-attribute">color</span>=<span class="hljs-string">"black"</span>, <span class="hljs-attribute">lw</span>=1.50)
+line.set_dashes([5, 10, 15, 10])
+
+<span class="hljs-comment"># 符号</span>
+ax.plot(x, x + 9, <span class="hljs-attribute">color</span>=<span class="hljs-string">"green"</span>, <span class="hljs-attribute">lw</span>=2, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'--'</span>, <span class="hljs-attribute">marker</span>=<span class="hljs-string">'+'</span>)
+ax.plot(x, x+10, <span class="hljs-attribute">color</span>=<span class="hljs-string">"green"</span>, <span class="hljs-attribute">lw</span>=2, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'--'</span>, <span class="hljs-attribute">marker</span>=<span class="hljs-string">'o'</span>)
+ax.plot(x, x+11, <span class="hljs-attribute">color</span>=<span class="hljs-string">"green"</span>, <span class="hljs-attribute">lw</span>=2, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'--'</span>, <span class="hljs-attribute">marker</span>=<span class="hljs-string">'s'</span>)
+ax.plot(x, x+12, <span class="hljs-attribute">color</span>=<span class="hljs-string">"green"</span>, <span class="hljs-attribute">lw</span>=2, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'--'</span>, <span class="hljs-attribute">marker</span>=<span class="hljs-string">'1'</span>)
+
+<span class="hljs-comment"># 符号大小和颜色</span>
+ax.plot(x, x+13, <span class="hljs-attribute">color</span>=<span class="hljs-string">"purple"</span>, <span class="hljs-attribute">lw</span>=1, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'-'</span>, <span class="hljs-attribute">marker</span>=<span class="hljs-string">'o'</span>, <span class="hljs-attribute">markersize</span>=2)
+ax.plot(x, x+14, <span class="hljs-attribute">color</span>=<span class="hljs-string">"purple"</span>, <span class="hljs-attribute">lw</span>=1, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'-'</span>, <span class="hljs-attribute">marker</span>=<span class="hljs-string">'o'</span>, <span class="hljs-attribute">markersize</span>=4)
+ax.plot(x, x+15, <span class="hljs-attribute">color</span>=<span class="hljs-string">"purple"</span>, <span class="hljs-attribute">lw</span>=1, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'-'</span>,
+        <span class="hljs-attribute">marker</span>=<span class="hljs-string">'o'</span>, <span class="hljs-attribute">markersize</span>=8, <span class="hljs-attribute">markerfacecolor</span>=<span class="hljs-string">"red"</span>)
+ax.plot(x, x+16, <span class="hljs-attribute">color</span>=<span class="hljs-string">"purple"</span>, <span class="hljs-attribute">lw</span>=1, <span class="hljs-attribute">ls</span>=<span class="hljs-string">'-'</span>, <span class="hljs-attribute">marker</span>=<span class="hljs-string">'s'</span>, <span class="hljs-attribute">markersize</span>=8,
+        <span class="hljs-attribute">markerfacecolor</span>=<span class="hljs-string">"yellow"</span>, <span class="hljs-attribute">markeredgewidth</span>=2, <span class="hljs-attribute">markeredgecolor</span>=<span class="hljs-string">"blue"</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><h4 id="画布网格、坐标轴范围">画布网格、坐标轴范围</h4>
+<p>有些时候，我们可能需要显示画布网格或调整坐标轴范围。设置画布网格和坐标轴范围。这里，我们通过指定 <code>axes[0]</code> 序号，来实现子图的自定义顺序排列。</p>
+<pre><code class="hljs python">fig, axes = plt.subplots(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>))
+
+# 显示网格
+axes[<span class="hljs-number">0</span>].plot(x, x**<span class="hljs-number">2</span>, x, x**<span class="hljs-number">3</span>, lw=<span class="hljs-number">2</span>)
+axes[<span class="hljs-number">0</span>].grid(True)
+
+# 设置坐标轴范围
+axes[<span class="hljs-number">1</span>].plot(x, x**<span class="hljs-number">2</span>, x, x**<span class="hljs-number">3</span>)
+axes[<span class="hljs-number">1</span>].set_ylim([<span class="hljs-number">0</span>, <span class="hljs-number">60</span>])
+axes[<span class="hljs-number">1</span>].set_xlim([<span class="hljs-number">2</span>, <span class="hljs-number">5</span>])
+</code></pre><pre><code class="hljs python">
+</code></pre><p>除了折线图，Matplotlib 还支持绘制散点图、柱状图等其他常见图形。下面，我们绘制由散点图、梯步图、条形图、面积图构成的子图。</p>
+<pre><code class="hljs python">n = np.array([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+
+fig, axes = plt.subplots(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, figsize=(<span class="hljs-number">16</span>, <span class="hljs-number">5</span>))
+
+axes[<span class="hljs-number">0</span>].scatter(x, x + <span class="hljs-number">0.25</span>*np.random.randn(len(x)))
+axes[<span class="hljs-number">0</span>].set_title(<span class="hljs-string">"scatter"</span>)
+
+axes[<span class="hljs-number">1</span>].step(n, n**<span class="hljs-number">2</span>, lw=<span class="hljs-number">2</span>)
+axes[<span class="hljs-number">1</span>].set_title(<span class="hljs-string">"step"</span>)
+
+axes[<span class="hljs-number">2</span>].bar(n, n**<span class="hljs-number">2</span>, align=<span class="hljs-string">"center"</span>, width=<span class="hljs-number">0.5</span>, alpha=<span class="hljs-number">0.5</span>)
+axes[<span class="hljs-number">2</span>].set_title(<span class="hljs-string">"bar"</span>)
+
+axes[<span class="hljs-number">3</span>].fill_between(x, x**<span class="hljs-number">2</span>, x**<span class="hljs-number">3</span>, color=<span class="hljs-string">"green"</span>, alpha=<span class="hljs-number">0.5</span>)
+axes[<span class="hljs-number">3</span>].set_title(<span class="hljs-string">"fill_between"</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><h3 id="图形标注方法">图形标注方法</h3>
+<p>当我们绘制一些较为复杂的图像时，阅读对象往往很难全面理解图像的含义。而此时，图像标注往往会起到画龙点睛的效果。图像标注，就是在画面上添加文字注释、指示箭头、图框等各类标注元素。</p>
+<p>Matplotlib 中，文字标注的方法由 <code>matplotlib.pyplot.text()</code> 实现。最基本的样式为 <code>matplotlib.pyplot.text(x, y, s)</code>，其中 x, y 用于标注位置定位，s 代表标注的字符串。除此之外，你还可以通过 <code>fontsize=</code> , <code>horizontalalignment=</code> 等参数调整标注字体的大小，对齐样式等。</p>
+<p>下面，我们举一个对柱形图进行文字标注的示例。</p>
+<pre><code class="hljs python">fig, <span class="hljs-attr">axes</span> = plt.subplots()
+
+<span class="hljs-attr">x_bar</span> = [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>, <span class="hljs-number">50</span>]  <span class="hljs-comment"># 柱形图横坐标</span>
+<span class="hljs-attr">y_bar</span> = [<span class="hljs-number">0.5</span>, <span class="hljs-number">0.6</span>, <span class="hljs-number">0.3</span>, <span class="hljs-number">0.4</span>, <span class="hljs-number">0.8</span>]  <span class="hljs-comment"># 柱形图纵坐标</span>
+<span class="hljs-attr">bars</span> = axes.bar(x_bar, y_bar, <span class="hljs-attr">color='blue',</span> <span class="hljs-attr">label=x_bar,</span> <span class="hljs-attr">width=2)</span>  <span class="hljs-comment"># 绘制柱形图</span>
+for i, rect <span class="hljs-keyword">in</span> enumerate(bars):
+    <span class="hljs-attr">x_text</span> = rect.get_x()  <span class="hljs-comment"># 获取柱形图横坐标</span>
+    <span class="hljs-attr">y_text</span> = rect.get_height() + <span class="hljs-number">0.01</span>  <span class="hljs-comment"># 获取柱子的高度并增加 0.01</span>
+    plt.text(x_text, y_text, '%.<span class="hljs-number">1</span>f' % y_bar[i])  <span class="hljs-comment"># 标注文字</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>除了文字标注之外，还可以通过 <code>matplotlib.pyplot.annotate()</code> 方法向图像中添加箭头等样式标注。接下来，我们向上面的例子中增添一行增加箭头标记的代码。</p>
+<pre><code class="hljs python">fig, <span class="hljs-attr">axes</span> = plt.subplots()
+
+<span class="hljs-attr">bars</span> = axes.bar(x_bar, y_bar, <span class="hljs-attr">color='blue',</span> <span class="hljs-attr">label=x_bar,</span> <span class="hljs-attr">width=2)</span>  <span class="hljs-comment"># 绘制柱形图</span>
+for i, rect <span class="hljs-keyword">in</span> enumerate(bars):
+    <span class="hljs-attr">x_text</span> = rect.get_x()  <span class="hljs-comment"># 获取柱形图横坐标</span>
+    <span class="hljs-attr">y_text</span> = rect.get_height() + <span class="hljs-number">0.01</span>  <span class="hljs-comment"># 获取柱子的高度并增加 0.01</span>
+    plt.text(x_text, y_text, '%.<span class="hljs-number">1</span>f' % y_bar[i])  <span class="hljs-comment"># 标注文字</span>
+
+    <span class="hljs-comment"># 增加箭头标注</span>
+    plt.annotate('Min', <span class="hljs-attr">xy=(32,</span> <span class="hljs-number">0.3</span>), <span class="hljs-attr">xytext=(36,</span> <span class="hljs-number">0.3</span>),
+                 <span class="hljs-attr">arrowprops=dict(facecolor='black',</span> <span class="hljs-attr">width=1,</span> <span class="hljs-attr">headwidth=7))</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>上面的示例中，<code>xy=()</code> 表示标注终点坐标，<code>xytext=()</code> 表示标注起点坐标。在箭头绘制的过程中，<code>arrowprops=()</code> 用于设置箭头样式，<code>facecolor=</code> 设置颜色，<code>width=</code> 设置箭尾宽度，<code>headwidth=</code> 设置箭头宽度，可以通过 <code>arrowstyle=</code> 改变箭头的样式。</p>
+<h3 id="兼容-matlab-代码风格接口">兼容 MATLAB 代码风格接口</h3>
+<p><i class="fa fa-exclamation-circle"> 提示</i>：本部分内容适合于之前有 MATLAB 基础的用户了解，其他读者可以直接跳过。</p>
+<p>相信很多学理工科的同学都使用过 MATLAB，它是一种用于算法开发、数据可视化、数据分析以及数值计算的高级技术计算语言和交互式环境。而在 Matplotlib 中，也提供了和 MATLAB 相似的 API。对于使用过 MATLAB 的同学而言，这将是入门 Matplotlib 最快的方式。</p>
+<p>使用 Matplotlib 提供的兼容 MATLAB API，需要导入 pylab 模块：</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pylab
+</code></pre><pre><code class="hljs python">
+</code></pre><p>使用 NumPy 生成随机数据：</p>
+<pre><code class="hljs python">x = np.linspace(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>)
+y = x * x + <span class="hljs-number">2</span>
+</code></pre><pre><code class="hljs python">
+</code></pre><p>只需要 1 句命令就可以完成绘图：</p>
+<pre><code class="hljs python">pylab.plot(<span class="hljs-symbol">x</span>, <span class="hljs-symbol">y</span>, <span class="hljs-string">'r'</span>)  # <span class="hljs-string">'r'</span> 代表 red
+</code></pre><pre><code class="hljs python">
+</code></pre><p>如果我们要绘制子图，就可以使用 <code>subplot</code> 方法绘制子图：</p>
+<pre><code class="hljs python">pylab.subplot(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)  # 括号中内容代表（行，列，索引）
+pylab.plot(x, y, <span class="hljs-string">'r--'</span>)  # ‘’ 中的内容确定了颜色和线型
+
+pylab.subplot(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+pylab.plot(y, x, <span class="hljs-string">'g*-'</span>)
+</code></pre><pre><code class="hljs python">
+</code></pre><p>使用兼容 MATLAB 风格的 API 的好处在于，如果熟悉 MATLAB，那么将很快上手使用 Python 绘图。不过，除了一些简单的图形之外，并不鼓励使用兼容 MATLAB 的 API。</p>
+<p>实验更加建议学习和使用前面介绍的 Matplotlib 提供的面向对象 API，它更加强大和好用。</p>
+<h3 id="课后习题">课后习题</h3>
+<p>尝试通过 Matplotlib 绘制出下图这副图像，你可能需要结合 <a href="https://matplotlib.org/api/index.html" target="_blank"><i class="fa fa-external-link-square"> 官方文档</i></a> 来查找合适的方法。</p>
+<p><img src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/uid214893-20190524-1558684935104" alt="图片描述"></p>
+<pre><code class="hljs python"><span class="hljs-meta"># 欢迎通过实验报告分享你的解答过程</span>
+</code></pre><p><a href="https://labfile.oss.aliyuncs.com/courses/892/sin_cos_functions.py" target="_blank"><i class="fa fa-external-link-square"> 参考答案</i></a></p>
+<h3 id="实验总结">实验总结</h3>
+<p>通过这节实验课程的学习，相信你已经初步掌握了使用 Matplotlib 绘图的方法和技巧。当然，如果你对 Matplotlib 非常感兴趣，也可以通过实验楼其他课程学习 Matplotlib 的更多内容。</p>
+<div style="color:#999; font-size:12px;">©️ 本课程内容，由作者授权实验楼发布，未经允许，禁止转载、下载及非法传播。</div><h2></h2></div></div> <div data-v-198dce4b="" class="copyright">
+        *本课程内容由作者授权实验楼发布，未经允许，禁止转载、下载及非法传播
+      </div></div> <div data-v-5a6f02b8="" data-v-198dce4b="" class="toolbar"><!----> <div data-v-5a6f02b8="" class="toolbar-btns"><button data-v-5a6f02b8="" type="button" class="btn toolbar-btn btn-primary">
+        完成学习
+      </button></div></div> <div data-v-31af5ef6="" data-v-198dce4b=""><!----></div></div> <!----> <!----> <!----></div> <div data-v-ea7cbec0="" data-v-00d8b544="" class="lab-console-report" data-v-48901454="" style="display: none;"><!----> <ul data-v-ea7cbec0="" class="nav nav-tabs"><li data-v-ea7cbec0="" class="nav-item"><a data-v-ea7cbec0="" class="nav-link active">
+        编辑
+      </a></li><li data-v-ea7cbec0="" class="nav-item"><a data-v-ea7cbec0="" class="nav-link">
+        预览
+      </a></li></ul> <div data-v-ea7cbec0="" class="tab-content"><div data-v-ea7cbec0="" class="tab-pane active lab-report-tab"><div data-v-ea88a3ba="" data-v-ea7cbec0="" class="editor"><div data-v-94795872="" data-v-ea88a3ba="" class="markdown-editor"><div data-v-374f1a78="" data-v-94795872="" class="tools"><div data-v-374f1a78=""><i data-v-374f1a78="" class="fa fa-bold"></i> <i data-v-374f1a78="" class="fa fa-italic"></i> <i data-v-374f1a78="" class="fa fa-link"></i> <i data-v-374f1a78="" class="fa fa-quote-left"></i> <i data-v-374f1a78="" class="fa fa-code"></i> <i data-v-374f1a78="" class="fa fa-image add-image-btn"></i> <div data-v-374f1a78="" class="custom-file b-form-file upload-image" id="__BVID__278__BV_file_outer_"><input type="file" class="custom-file-input" id="__BVID__278"><label data-browse="Browse" class="custom-file-label" for="__BVID__278">No file chosen</label></div> <i data-v-374f1a78="" class="fa fa-list-ol"></i> <i data-v-374f1a78="" class="fa fa-list-ul"></i></div> <a data-v-374f1a78="" href="https://www.shiyanlou.com/questions/764/" target="_blank" class="markdown-syntax"><i data-v-374f1a78="" class="fa fa-question-circle"></i>
+    格式说明
+  </a></div> <textarea data-v-94795872="" placeholder="报告将自动保存，推荐使用 markdown 语法：
+
+报告是您在本实验保存的笔记、截图及实验代码的完整记录，多记录学习更高效哦~" class="textarea form-control"></textarea> <!----></div> <div data-v-78b3a632="" data-v-ea88a3ba=""><!----> <div data-v-78b3a632="" class="custom-file b-form-file upload-image" id="__BVID__280__BV_file_outer_"><input type="file" class="custom-file-input" id="__BVID__280"><label data-browse="Browse" class="custom-file-label" for="__BVID__280">No file chosen</label></div></div></div></div> <!----></div> <button data-v-ea7cbec0="" type="button" disabled="disabled" class="btn publish-btn btn-primary disabled"><i data-v-ea7cbec0="" class="fa fa-share"></i> <span data-v-ea7cbec0="">发布</span></button></div> <div data-v-24a59a0a="" data-v-00d8b544="" class="lab-question" data-v-48901454="" style="display: none;"><div data-v-38f43bd3="" data-v-24a59a0a="" class="operate"><button data-v-38f43bd3="" class="btn btn-primary">
+    发布帖子
+  </button> <fieldset data-v-38f43bd3="" class="form-group form-group" id="__BVID__283"><!----><div tabindex="-1" role="group"><div data-v-38f43bd3="" class="custom-control custom-checkbox"><input type="checkbox" name="checkbox" autocomplete="off" class="custom-control-input" value="true" id="__BVID__284"><label class="custom-control-label" for="__BVID__284">
+      只看我的
+    </label></div><!----><!----><!----></div></fieldset> <!----> <div data-v-38f43bd3=""><!----></div></div> <div data-v-51d37e30="" data-v-24a59a0a="" class="best-question"><!----></div> <div data-v-91301d3e="" data-v-24a59a0a="" class="normal-question"><div data-v-5fd8fa79="" data-v-91301d3e="" class="question-list" question-type="normal"><div data-v-5fd8fa79="" class="list-title">
+    本节帖子(10)
+  </div> <ul data-v-5fd8fa79="" style="height: 713px;"><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/174603" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          定义图形参数问题
+        </p> <span data-v-5fd8fa79="" class="answer-num">1回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/174355" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          散点图教学中所用函数的各值含义
+        </p> <span data-v-5fd8fa79="" class="answer-num">1回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/174354" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          散点图教学中所用函数的各值含义
+        </p> <span data-v-5fd8fa79="" class="answer-num">1回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/173777" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          关于scatter的size参数是什么意思
+        </p> <span data-v-5fd8fa79="" class="answer-num">3回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/172608" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          线下环境中为什么饼状图无法正圆显示
+        </p> <span data-v-5fd8fa79="" class="answer-num">1回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/172610" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          线下环境中为什么饼状图无法正圆显示
+        </p> <span data-v-5fd8fa79="" class="answer-num">2回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/172609" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          线下环境中为什么饼状图无法正圆显示
+        </p> <span data-v-5fd8fa79="" class="answer-num">1回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/84710" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          小编  有人盗用你们的东西 我把网址给你们
+        </p> <span data-v-5fd8fa79="" class="answer-num">3回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/84615" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          注释描述有误
+        </p> <span data-v-5fd8fa79="" class="answer-num">1回复</span></a></li><li data-v-5fd8fa79="" class="list-item"><a data-v-5fd8fa79="" href="https://www.shiyanlou.com/questions/82790" target="_blank"><!----> <p data-v-5fd8fa79="" class="question-title is-best">
+          绘制直方图的小问题
+        </p> <span data-v-5fd8fa79="" class="answer-num">1回复</span></a></li> <li data-v-5fd8fa79="" class="load-msg"><span data-v-5fd8fa79="">到底了~</span></li></ul></div></div></div> <!----> <!----></div> <div data-v-23e30aba="" data-v-00d8b544="" class="course-labs-panel customize-modal text-right" data-v-48901454="" style="display: none;"><div data-v-23e30aba="" class="modal-content-wrapper modal-labs-box inline-block text-left"><div data-v-23e30aba="" class="modal-content content-box"><div data-v-23e30aba="" class="box-header progress-info no-margin"><p data-v-23e30aba="" class="progress-desc font-18">
+          目前已完成 1/2 个章节的学习
+        </p> <div data-v-23e30aba="" class="progress-graph flex space-between vertical-center"><div data-v-23e30aba="" class="progress-bar-outter relative"><span data-v-23e30aba="" class="progress-percentage-label font-12" style="left: 50%;">
+              50%
+            </span> <div data-v-23e30aba="" class="progress" style="height: 5px;"><div data-v-23e30aba="" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" class="progress-bar bg-primary learn-progress-bar" style="width: 50%;"><!----></div></div></div> <!----> <div data-v-23e30aba="" aria-hidden="true" class="d-none" style="display: none;"><div><span data-v-23e30aba="" class="font-12">完成全部章节即可获得完课证书</span></div></div></div> <!----></div> <div data-v-23e30aba="" class="box-body chapter-stages"><div data-v-58426d58="" data-v-23e30aba="" class="chapter-stage collapse-item"><!----> <div data-v-58426d58="" id="collapse-stage-0" class="stage-body collapse show" style=""><div data-v-5c68598e="" data-v-58426d58="" class="lab-item pointer"><div data-v-5c68598e="" class="item-top flex space-between color-primary bold"><div data-v-5c68598e="" class="top-left vertical-center"><span data-v-5c68598e="" class="inline-block lab-icon"><!----> <!----> <img data-v-5c68598e="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAmtJREFUSA3tlU9oE0EUxt+bdMM2kRIEq1IPWqweQgtSL2JrsiCIelJR9CIIShRDTloQFHsQ/ANCbYK2VNFj6cGjF9HdFMEIFaShPVQpCl6sCKE13SRr5jmzcUKp3dbECoIOLN/um3nfb+ftzCzA//a3VQDVCwXN/r0c4SYBdQBBg4rXrAjfEHCcMdaT3xN/JvNdSFN6oK1EpXEk+CQiI0g0X7P5jwQC1AnhiHjc5Ed/x2zk7Fv3jR1eOghAumB22dHEx3oBKi9kPrxRwNnPFV/oY7IDgUJSbeP3AdInZ5zKiZLNKV8XIjv+ZKsZ0kvEoqZZ08JYERIw75xe8yIVVjO9lU5dy2D2rnxutJI9gdHBjarPS5eF6OnkVQ7QRw5q0iA8MeIn4GeQ2POKIXVxXrRWAnlCdCt5BTi/CMx3IG+cfyNNp2dmDkttbW5+LLWlBY4KmZagYGZovYwt1TwhAPwEIL4KB7WXKpGQxwDZo4nwsZKMvWtLFBmjASDaRsVipxq3WL0/oObbD07ZmvxaHO4cGzw+ZTtbnDKPNDCMKZPgaHJfmdMwMrgwH4k/UfHF6jmTwu74B9B8UQLYMZkvHCpzbojkp3Pd8SllwjkNIcJlO5K4rWJLqfdMxGgJErPY/npnzJFL17KsB9YCl9Z1G7aq0i0I/3S7LESOlgCpvYhioYG8qu1XAHKwZ7mqTqtw40LEqflFeq3N9DetgieIEmtEEFC+7lEfMu9tLqCTFYAxcVreZxzz9cIqRz0/KfK7ddLac8a599WfVqOV2gXErwNSu1hR7g6vByQMHSDMiv10yY7Gq3usHq9/NOc77YPc8hnQeRYAAAAASUVORK5CYII=" alt="lab-classic"></span> <span data-v-5c68598e="" class="inline-block lab-index color-primary bold">
+        实验 1
+      </span> <span data-v-5c68598e="" title="Matplotlib 二维图形绘制方法" class="inline-block lab-name">
+        Matplotlib 二维图形绘制方法
+      </span></div> <div data-v-5c68598e="" class="top-right"><img data-v-5c68598e="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAmdJREFUSA21ls9rU0EQx2c2sWmCBVuphVh/QAsK1rZ4FlQUxR9YqtdeBHvw0GD/AvHkPT0a7EUPBYso2OJBrODNiwcFfyBoEX8heojEIr63znfztnm/+vKerQNhs5vZz8zOzs6EKUGKj6r9rPSYq/m0qA3Ip+ypf5TxrWJ9X7t899eRygdvPTJwZEUWSk9myu4ffZU0XSDSuTid1ho7xDSr8nylcXAKhgMSMVB6PHPW1e5NgXcFNNtNmOqK1UTj0NQ9v6ryT4pL1YrA72SGAyIOYS8YfubqCTzPAQ8Y9Sun+s7kyknG7UmMgWbM3Zf/5HmcVYQrr/biToy33oVmi3kc2K4hXEgSEUYqaqJ37bPF7k47siPh2S3h0mMbD4cTOge28h5RWrcCelvyBbq84wD1FzYH1u0E7LxM8EIzS7fAF0bGabRrGxVVjq69fxrHGMAl2+cfUIB353oHqYOjD9kPf9P4QTc+vQjs9U3Ka+b8pe3DdGvfKZrff4YK4qGVMPz4s3n68rthf46MMBCpH9Ca+/rabDzWs4tuDzWNxME/J8DB5s6l6gJpfRLQsOwpddOD0fPU11Gih9+XaeumThNzhAWet4HLI+BFhZIbBtv5KwGd8EJwtGdnNrhAwFao52LKsdDwaI0sr9Tp+c9v6Tw3EHbANrVIwnRdwnQxDPfPc8zkaHnzaYW5tnK4MmmyCM1CmkY9aW82OIqdMEWMAVP1pFmIETfJSKrfmuV6wna31XeA+s3E0+syInAwbC+AQ+YO/J7915YJQ7COZiE5XEvKrpZTaPpcMw0m1I+hEzlBayPRRvxt+QvzgQD15GCKOwAAAABJRU5ErkJggg==" alt="已学习"></div></div> <!----></div><div data-v-5c68598e="" data-v-58426d58="" class="lab-item pointer"><div data-v-5c68598e="" class="item-top flex space-between color-text"><div data-v-5c68598e="" class="top-left vertical-center"><span data-v-5c68598e="" class="inline-block lab-icon"><!----> <!----> <img data-v-5c68598e="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAipJREFUSA3tlcFrE0EUxpONNaGQpYdAEXopNHoIBjaGJEKhLRREPVkR9NKTkn+gDQiKF9H2UMhJClXosXgQSqEXqfSWbAiktOSiIAhepAjCYkOaZtPfW51QQjZtQgoFHRi+mbdvvu+9N29Yj+f/uGgV8KqAcrncNOvFRqMRBS8pew945PV6d30+XyaRSGzJeUckn8+HbdveZf9D07T3CB30QK6OBFjch2MErmgqlfriRIzAXT4EMI5j/K68e8VSqbRQqVT2//JmNSEivSHBfggIj2EYvwBL8Toi8uE8R9ci1FpjdtUYp4rQdY8LhUJEZWqa5ksa5Y3s+ZYpFotX1Dc37CgCyQsOZpkDQlAuly+TxRNq/Un2jPFarbZ9mpCrCNE+h2Sefr9Dv+8Io2VZM4LBYPCDYCgUegB8FSH8h8XWbriKEPEjpklb59RB9mnmaiQSORRbOByuktUytqtsbyi/VnS9QL/ff7tarW4T5RrleFiv10fp+wkySysS7ucW9jUCmaP9N5W9FV0zicVi3xCa5ICB0D3Ipoj4YzKZ/KxIEF1B4BkCS8rWDl0zEWcRIotr8Xi8hoAE9O4kia7rY6p0J+2t644i4iwCgtTeBmQ2x1kExNm1XE2mPiyUyE/hog31PnB6KLG8q0Gmw6vKtYHhFXVf5wG+5TJ/9yoGR4BGmeW8lFl4//xPZEE73qRbXrO8jqPzwsXe7eDuhHyPQJ/Sic031i3PP+x/DBPn3QC5lw/kAAAAAElFTkSuQmCC" alt="lab-classic"></span> <span data-v-5c68598e="" class="inline-block lab-index color-999">
+        实验 2
+      </span> <span data-v-5c68598e="" title="Matplotlib 三维图形绘制方法" class="inline-block lab-name">
+        Matplotlib 三维图形绘制方法
+      </span></div> <div data-v-5c68598e="" class="top-right"><img data-v-5c68598e="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgxJREFUSA21ljtuAjEQhne9IETBAbJKR5MD5BaREhANjzRcIFIKonQoHUqKSLkATXg0CBKJW+QAaeiiXICCAnbh/53xCgQELw9L1no94+/32uPxus4/pdfrnU8mkxvXda/glkX1xf0Xz9F8Ph+m0+mPQqHwI/1rD3etBx2dTscPw/AJzSog3iYf0wfxAO2mUqpeKpUovFLWBAC/DoLgHV4Z1CkAA4gMEonEFyAaAHF/NptdwpaDLQe/JOrY87xbiHyiHZUVgVardYcBr7Aq1D6gtWKxOIq8NzS63W4WYi8w5VFDiN5XKpU34xoJyMz7NGCmj+VymYOsS7vdruHLGhyAL8mbL9ECXHMsyzdsGcAf4sLNLETkGe9crgvuCZfCkQ3lmvf3hZMjY7kKGWE6iqGIjirqlGuO50FFGFNAqmQrxjlDkdGya0NtlMmQyPPIVnjhIXIYijYAGx/DIpt7wBPqMM5tBtv4LLGyFNDH3xwiG8AunyWWr6No14C49lQqFZ0vCkTHPy5omz8290xs+hzoVMDcsm1A3P4l1khhx4cEYMeZtI5SDItsxXyOjgAvOSauQxXIIItMspVcFk2Ak5IVD9IQBtN3k2wdRQirOjrGqHkmrH0VZCzT9liYOu87zHq8LGBAjgob+4hIJmW6DuXi0dEZxStnfdILhwIsJ70y/yROfOkbET6P8duyADFNLbDfiJeBAAAAAElFTkSuQmCC" alt="未学习"></div></div> <!----></div> <br data-v-58426d58=""></div></div></div></div></div></div></div></div></div> <div data-v-d68b6290="" class="drag can-drag" style="display: none;"></div> <div data-v-d68b6290="" class="drag can-not-drag" style="left: 203px;"></div> <div data-v-531a5542="" data-v-bebca12e="" data-v-d68b6290="" class="right-box" style="width: 1255px;"><!----> <!----> <!----> <div data-v-d685947a="" data-v-bebca12e="" class="iframe-env" data-v-531a5542=""><iframe data-v-d685947a="" src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/lab.html" class="iframe"></iframe> <div data-v-d685947a="" class="copyright">
+    *本课程内容由作者授权实验楼发布，未经允许，禁止转载、下载及非法传播
+  </div></div> <!----> <!----></div> <div data-v-37b730a4="" data-v-d68b6290="" class="lab-tools show"><div data-v-37b730a4="" class="toggle-btn"><i data-v-37b730a4="" class="fa fa-angle-double-right"></i></div> <div data-v-18205388="" data-v-37b730a4="" class="left-time"><div data-v-18205388="" class="text">
+    45:44
+  </div> <button data-v-18205388="" type="button" class="btn add-time-btn btn-secondary">
+    延时
+  </button> <!----></div> <!----> <div data-v-37b730a4="" class="divide"></div> <div data-v-c19f4d44="" data-v-37b730a4=""><button data-v-c19f4d44="" type="button" class="btn stop-lab-btn btn-danger"><i data-v-c19f4d44="" class="fa fa-stop"></i>
+    关闭环境
+  </button> <!----> <div data-v-5751383a="" data-v-78fab3f2="" data-v-c19f4d44="" class="base-left-modal" style="display: none;"><div data-v-5751383a="" class="box"><div data-v-5751383a="" class="close"><i data-v-5751383a="" class="fa fa-times"></i></div> <div data-v-5751383a="" class="content"><div data-v-78fab3f2="" data-v-5751383a="">
+    选择想要替换的环境
+    <div data-v-78fab3f2="" data-v-5751383a="" class="modal-sub-title">
+      （被替换的环境将被删除）
+    </div></div></div>  <div data-v-78fab3f2="" data-v-5751383a=""><div data-v-78fab3f2="" data-v-5751383a="" class="items"></div> <div data-v-78fab3f2="" data-v-5751383a="" class="footer"><button data-v-78fab3f2="" data-v-5751383a="" type="button" class="btn confirm-btn btn-primary">
+        确认
+      </button> <div data-v-78fab3f2="" data-v-5751383a="">
+        返回上一步
+      </div></div></div></div></div></div> <div data-v-37b730a4="" class="divide"></div> <!----> <!----> <!----> <!----> <div data-v-e7838ea4="" data-v-37b730a4=""><div data-v-e7838ea4="" class="common-btn"><div data-v-e7838ea4=""><i data-v-e7838ea4="" class="fa fa-arrows-alt"></i>
+    桌面全屏
+  </div></div> </div> <div data-v-37b730a4="" class="divide"></div> <!----> <!----> <!----> <div data-v-e7838ea4="" data-v-37b730a4=""><div data-v-e7838ea4="" class="common-btn"><div data-v-e7838ea4=""><i data-v-e7838ea4="" class="fa fa-bookmark-o"></i>
+    环境使用指南
+  </div></div> </div></div> <div data-v-817ed8d0="" data-v-d68b6290="" class="messages"><!----></div> <!----> <!----> <!----> <div data-v-d68b6290="" class="hundred-level-modal"><!----></div></div> <div data-v-57a4eb3b=""><!----> <!----></div> <div data-v-62b04b40="" data-v-57a4eb3b="" class="risk-validation"><!----></div> <!----> <!----> <!----></div>  <!----> <!----> <div data-v-6fbfd453="" data-v-57a4eb3b="" class="flash-message"><!----></div> <!----></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e,f,g,h){return {layout:"default",data:[{}],error:a,state:{env:{nodeEnv:"production",apiEndpointV1:f,apiEndpointV2:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2",apiEndpointLocalV1:f,apiEndpointLocalV2:"http:\u002F\u002Fshiyanlou-v2-web-svc\u002Fapi\u002Fv2",cometServiceUrl:"wss:\u002F\u002Fcomet.shiyanlou.com",staticHost:"https:\u002F\u002Fstatic.shiyanlou.com\u002Ffrontend\u002Fstatic",menuHost:f},teacher:{course:{},labs:[],monthData:[],courseUserStatus:{},courseStudents:[],labReports:[],activeLab:{},publishedCourses:[],comments:{},commentStatus:[],questions:{},"mutation-types":{}},labTask:{showLabTask:e,labTask:a,savedEnv:a},library:{navData:{},blocks:[],book:{},chapters:[],chapterContents:{},activeChapterSlug:c,isLiked:b,isMarked:b,"mutation-types":{}},live:{notEndedLiveCourses:{},endedLiveCourses:{},liveLab:{},course:{},liveUserStatus:{},chatroomInfo:{},chatroomUserInfo:{},chatroomAuthPayload:{},"mutation-types":{}},home:{courseCategories:c,swapper:c,classicalCourse:c,recentLouplus:c,popularBootCamp:c,popularPath:c,advertisement:c,advertisementStatus:{height:d,show:b},"mutation-types":{}},mall:{products:{},product:{},order:{},"mutation-types":{}},message:{show:b,type:c,message:c,"mutation-types":{}},messages:{messages:{},"mutation-types":{}},path:{paths:[],path:{},pathUserStatus:c,stage_list:[],"mutation-types":{}},promotion:{promotion:{},coupon:{},"mutation-types":{}},course:{categories:[],courses:{},coursesUserStatus:[],course:{},labStages:[],labDocData:{},labsUserStatus:[],activeLab:{},questions:{},reports:{},isReply:b,answer:{},comments:{},commentsUserStatus:[],replayUser:{},startLabLoading:b,studentMeta:{order:[],data:{}},relatedCourseGroups:[],pathNextCourses:[],recentlyContests:[],relatedChallenges:[],courseTopStudents:[],monthData:[],students:[],runningStudents:[],louplusStudentsRankData:{},"mutation-types":{},actions:{id:{}}},user:{userBaseInfo:{},userPublicInfo:{},userStudyRecords:{register_date:g,total_study_days:14,current_studying_days:d,max_studying_days:5,records:[{minutes:138,timestamp:1572307200},{minutes:117,timestamp:1572393600},{minutes:23,timestamp:1572480000},{minutes:126,timestamp:1572566400},{minutes:191,timestamp:1572825600},{minutes:51,timestamp:1572912000},{minutes:103,timestamp:1572998400},{minutes:114,timestamp:1573084800},{minutes:39,timestamp:1573171200},{minutes:h,timestamp:1573430400},{minutes:11,timestamp:1573516800},{minutes:108,timestamp:1573603200},{minutes:189,timestamp:1573776000},{minutes:129,timestamp:1574035200},{minutes:d,timestamp:1574121600}]},userVisitors:[],userReportStatistic:{},userCoursesStatus:[],userMedals:[],editableUserInfo:{},editUserInfoStatus:{nickname:b,school:b},editUserPassword:{status:b,newPwd:c,oldPwd:c},hundredLevelUserInfo:{},userEmailSettings:{},courseRecordAction:{},oauthStatus:{},certificate:{},userCertificates:[],"mutation-types":{}},contest:{contests:a,contest_detail:a,contests_rank:a,contest_rank:{results:[]},contest_list:[],user_contest_status:{},"mutation-types":{}},question:{questions:{count:d,results:[]},question:{},questionUserStatus:{},relatedQuestions:[],answers:{},answer:{},answersUserStatus:[],isReply:b,"mutation-types":{},utils:{},actions:{question:{},"question.config":{},answer:{},"answer.config":{}}},challenge:{challenges:a,challengesStatus:a,challenge_tags:[],submissions:a,answers:a,lab_document:{},submission:{},challenge:{},modal:b,modal_content:{},"mutation-types":{}},report:{reports:{},report:{},user_status:[],related:[],study_data:{},lab_user_status:{},"mutation-types":{}},bootcamp:{courses:{},categories:[],"mutation-types":{}},search:{results:{},"mutation-types":{}},auth:{loggedIn:e,user:{id:1183262,name:"LOU263208170",avatar_url:"https:\u002F\u002Fdn-simplecloud.shiyanlou.com\u002Fgravatar2v5mHQBVw6yI.jpg?imageView2\u002F1\u002Fw\u002F200\u002Fh\u002F200",is_graduated:b,job_title:a,school:a,level:45,member_type:a,teacher_info:a,labels:[],join_date:g,status:"active",html_url:"\u002Fusers\u002F1183262",api_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002F",courses_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fcourses\u002F",questions_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fquestions\u002F",comments_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fcomments\u002F",contests_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fapi\u002Fv2\u002Fusers\u002F1183262\u002Fcontests\u002F",studied_courses_count:16,followed_courses_count:d,published_courses_count:d,marked_books_count:d,is_site_admin:b,is_teacher:b,email:a,is_email_validated:b,phone:"+8618813017082",beans:"48",created_at:"2019-10-29T11:27:24+08:00",study_minutes:1341,free_minutes:d,today_study_minutes:d,bought_courses_count:1,study_labs_count:301,basic_member_expired_at:a,plus_member_expired_at:a,premium_member_expired_at:a,invitation_html_url:"https:\u002F\u002Fwww.shiyanlou.com\u002Fregister?inviter=NTY0MzIwMTk1OTM3",member_invitation_code:c,have_saved_vm:b,enterprise_html_url:c,unread_messages_count:d,is_enterprise_admin:b,session_id:"62af5e6b-c8c5-4718-8a01-89bf67096240.bQRXeXqE4HQGm6jJp8VyxXtFO9w",is_set_password:e,roles:[],abilities:[],in_bailou_club:b,course_quota:h,is_subscribe_mp:b},isChecked:b,risk:{isRisk:b},authTokens:{},beans:d,signActive:"signInForm",token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNb0h1bWZGeWt3bFdmT2JoNVVSSXpvNEdrV0dHVFZpdSIsImlhdCI6MTU3NDA1MjIyNCwiZXhwIjoxNTc0MTM4NjI0fQ.W1VKFxuPdYO3XNDerlbiOv4NyKUvw84bg1WQ20B32hc","mutation-types":{},redirect:"\u002Fuser\u002F"},sideBox:{recentLouplus:[],recentActivity:[],followedPath:[],"mutation-types":{}},activity:{activity:{start_at:a,end_at:a,member_config:a,bootcamp_config:a,louplus_config:a},rules:[{product_type:"premium",discount_type:"present",derate_money:d,second_kill_price:a,second_kill_amount:d,extra_config:{progress:d,quota:d},present_days:30,discount_percent:"1.000",course_ids:[],buy_days:365}],modal:{activity_id:a,start_at:a,end_at:a,config:a},"mutation-types":{}},louplus:{louplusInfo:{},louplusList:[],louplusUserStatus:{},"mutation-types":{}}},serverRendered:e}}(null,false,"",0,true,"https:\u002F\u002Fwww.shiyanlou.com","2019-10-29",2));</script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/f3a337105fb6129b39d1.js.下载" defer=""></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/fc69b49de4534c50867a.js.下载" defer=""></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/29ea2ed2528c967b98f4.js.下载" defer=""></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/cc58aae2d5b624e45e75.js.下载" defer=""></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/34e4120db4a53410cbcd.js.下载" defer=""></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/0eed17603f033879ebbc.js.下载" defer=""></script>
+  
+
+<script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/guide.js.下载"></script><script></script><script src="./Matplotlib 数据绘图基础课程 - Matplotlib 二维图形绘制方法 - 实验楼_files/guide.js.下载"></script></body></html>
